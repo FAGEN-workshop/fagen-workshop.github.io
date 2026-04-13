@@ -2,61 +2,89 @@ import Link from "next/link";
 
 import { site } from "@/lib/workshop-data";
 
+const infoItems = [
+  {
+    label: "Focus",
+    text: "Reproducible triggers, trace diagnostics, and verified fixes for agentic failures.",
+  },
+  {
+    label: "Format",
+    text: "Keynotes, contributed spotlights, posters, and a panel on practical agent failure modes.",
+  },
+  {
+    label: "Status",
+    text: "Submission portal and final deadlines are still being finalized.",
+  },
+];
+
 export function HeroSection() {
   return (
-    <section className="bg-[linear-gradient(180deg,#f6f1e8_0%,#ffffff_100%)] pt-8">
+    <section
+      className="relative overflow-hidden bg-slate-900 pb-16 pt-24"
+      style={{
+        backgroundImage: [
+          "radial-gradient(ellipse at 18% 65%, rgba(79,70,229,0.22) 0%, transparent 52%)",
+          "radial-gradient(ellipse at 80% 20%, rgba(79,70,229,0.10) 0%, transparent 45%)",
+          "linear-gradient(rgba(99,102,241,0.055) 1px, transparent 1px)",
+          "linear-gradient(90deg, rgba(99,102,241,0.055) 1px, transparent 1px)",
+        ].join(", "),
+        backgroundSize: "auto, auto, 56px 56px, 56px 56px",
+      }}
+    >
       <div className="mx-auto max-w-[1154px] px-4">
-        <div className="overflow-hidden rounded-[36px] border border-[#d7cdbf] bg-[#22170f] px-6 py-10 shadow-[0_24px_60px_rgba(34,23,15,0.18)] md:px-10 md:py-14">
-          <p className="text-[14px] font-semibold uppercase tracking-[0.18em] text-[#d7c2a2]">
+        {/* Conference badge */}
+        <div className="inline-flex items-center rounded-full border border-indigo-500/30 bg-indigo-500/10 px-4 py-1.5">
+          <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-indigo-400">
             {site.conferenceLabel}
-          </p>
-          <h1 className="mt-5 max-w-[900px] text-left text-[36px] font-bold leading-[42px] text-[#f8f5ef] md:text-[58px] md:leading-[64px]">
-            {site.fullTitle}
-          </h1>
-          <p className="mt-6 max-w-[860px] text-[18px] leading-[30px] text-[#efe5d5] md:text-[20px] md:leading-[32px]">
-            {site.heroBlurb}
-          </p>
+          </span>
+        </div>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Link
-              href="/submit"
-              className="inline-flex items-center justify-center rounded-full bg-[#f3eee4] px-5 py-3 text-[16px] font-semibold text-[#241a11] no-underline transition-transform hover:-translate-y-0.5"
-            >
-              View Call for Contributions
-            </Link>
-            <Link
-              href="/schedule"
-              className="inline-flex items-center justify-center rounded-full border border-[#b89d7b] px-5 py-3 text-[16px] font-semibold text-[#f8f5ef] no-underline transition-colors hover:bg-[#f8f5ef] hover:text-[#241a11]"
-            >
-              See Tentative Schedule
-            </Link>
-          </div>
+        {/* Title */}
+        <h1
+          className="mt-6 max-w-[840px] text-left font-semibold text-slate-50"
+          style={{
+            fontSize: "clamp(32px, 5.2vw, 62px)",
+            lineHeight: "1.1",
+            letterSpacing: "-0.03em",
+          }}
+        >
+          {site.fullTitle}
+        </h1>
 
-          <div className="mt-10 grid gap-4 md:grid-cols-3">
-            <div className="rounded-[24px] border border-[#3c2a1c] bg-[#2a1d14] p-5">
-              <p className="text-[14px] font-semibold uppercase tracking-[0.14em] text-[#d7c2a2]">
-                Focus
-              </p>
-              <p className="mt-2 text-[16px] leading-[25px] text-[#f8f5ef]">
-                Reproducible triggers, trace diagnostics, and verified fixes for agentic failures.
-              </p>
-            </div>
-            <div className="rounded-[24px] border border-[#3c2a1c] bg-[#2a1d14] p-5">
-              <p className="text-[14px] font-semibold uppercase tracking-[0.14em] text-[#d7c2a2]">
-                Format
-              </p>
-              <p className="mt-2 text-[16px] leading-[25px] text-[#f8f5ef]">
-                Keynotes, contributed spotlights, posters, and a panel on practical agent failure modes.
-              </p>
-            </div>
-            <div className="rounded-[24px] border border-[#3c2a1c] bg-[#2a1d14] p-5">
-              <p className="text-[14px] font-semibold uppercase tracking-[0.14em] text-[#d7c2a2]">
-                Status
-              </p>
-              <p className="mt-2 text-[16px] leading-[25px] text-[#f8f5ef]">
-                Submission portal and final deadlines are still being finalized.
-              </p>
-            </div>
+        {/* Subtitle */}
+        <p className="mt-6 max-w-[640px] text-[17px] leading-[1.72] text-slate-400">
+          {site.heroBlurb}
+        </p>
+
+        {/* CTA buttons */}
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <Link
+            href="/submit"
+            className="inline-flex items-center justify-center rounded-lg bg-indigo-600 px-6 py-3 text-[15px] font-semibold text-white no-underline transition-all hover:bg-indigo-500 hover:shadow-[0_0_0_3px_rgba(99,102,241,0.28)]"
+          >
+            View Call for Contributions
+          </Link>
+          <Link
+            href="/schedule"
+            className="inline-flex items-center justify-center rounded-lg border border-slate-600 px-6 py-3 text-[15px] font-semibold text-slate-300 no-underline transition-all hover:border-slate-400 hover:text-white"
+          >
+            See Tentative Schedule
+          </Link>
+        </div>
+
+        {/* Info row */}
+        <div className="mt-12 border-t border-slate-700/60 pt-8">
+          <div className="grid gap-6 md:grid-cols-3">
+            {infoItems.map((item) => (
+              <div key={item.label}>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-indigo-400">
+                  {item.label}
+                </p>
+                <p className="mt-2 text-[14px] leading-[1.7] text-slate-400">
+                  {item.text}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -92,6 +92,16 @@ export const contributionNotes = [
 
 export const speakers: Person[] = [
   {
+    name: "Yoshua Bengio",
+    affiliation: "Universite de Montreal, LawZero, and Mila",
+    bio: "Yoshua Bengio is a Full Professor of Computer Science at Université de Montréal, Founder of Mila (the Quebec AI Institute), and Co-President of LawZero. A recipient of the 2018 Turing Award alongside Geoffrey Hinton and Yann LeCun, his research spans deep learning foundations and, increasingly, AI safety and the governance of frontier systems.",
+    focus: "AI safety, frontier model governance, and deep learning foundations",
+    profileUrl: "https://yoshuabengio.org/en",
+    imageUrl: "/people/yoshua-bengio.jpg",
+    assets: ["GFlowNets", "International AI Safety Report"],
+    postProposal: true,
+  },
+  {
     name: "James Zou",
     affiliation: "Stanford University and CZ Biohub",
     bio: "James Zou is an Associate Professor of Biomedical Data Science, Computer Science, and Electrical Engineering at Stanford. His work focuses on making AI more reliable, human-compatible, and statistically rigorous, with major applications in health and biomedicine.",
@@ -117,7 +127,6 @@ export const speakers: Person[] = [
     profileUrl: "https://www.informatik.tu-darmstadt.de/ukp/ukp_home/head_ukp/index.en.jsp",
     imageUrl: "/people/iryna-gurevych.png",
     assets: ["OpenFactCheck", "Error localization for long-form QA"],
-    note: "Remote participation currently appears more likely than in-person attendance.",
   },
   {
     name: "Greg Durrett",
@@ -127,7 +136,6 @@ export const speakers: Person[] = [
     profileUrl: "https://gregdurrett.github.io/",
     imageUrl: "/people/greg-durrett.png",
     assets: ["MiniCheck", "Molecular Facts"],
-    note: "Currently expected to participate remotely if scheduling allows.",
   },
   {
     name: "Samy Bengio",
@@ -143,7 +151,8 @@ export const speakers: Person[] = [
     affiliation: "Allen Institute for AI",
     bio: "Nouha Dziri is a researcher at AI2 working on large language models with a focus on reasoning limits, faithfulness, post-training, and safety-oriented evaluation.",
     focus: "Faithfulness failures and feedback grounding",
-    profileUrl: "https://noudzi.github.io/",
+    profileUrl: "https://nouhadziri.github.io/",
+    imageUrl: "/people/nouha-dziri.jpg",
     assets: ["FaithDial", "BEGIN"],
   },
   {
@@ -154,7 +163,6 @@ export const speakers: Person[] = [
     profileUrl: "https://maartensap.com/aboutme.html",
     imageUrl: "/people/maarten-sap.webp",
     assets: ["SOTOPIA", "SOTOPIA-pi"],
-    note: "Remote participation is currently more likely than in-person attendance.",
   },
   {
     name: "Yi Dong",
@@ -177,24 +185,12 @@ export const speakers: Person[] = [
   {
     name: "Rishi Bommasani",
     affiliation: "Stanford HAI",
-    bio: "Rishi Bommasani is a Senior Research Scholar at Stanford HAI whose work examines the societal, economic, and governance implications of frontier AI. Organizer notes include a proposed talk on the economics and governance of frontier AI.",
+    bio: "Rishi Bommasani is a Senior Research Scholar at Stanford HAI whose work examines the societal, economic, and governance implications of frontier AI. He will speak on the economics and governance of frontier AI.",
     focus: "Frontier AI governance and deployment implications",
     profileUrl: "https://hai.stanford.edu/people/rishi-bommasani",
     imageUrl: "/people/rishi-bommasani.png",
-    statusLabel: "Confirmed after proposal",
+    assets: ["Foundation Models", "HELM"],
     postProposal: true,
-    note: "Confirmed in organizer follow-up after the accepted proposal. The working doc lists a planned talk on the economics and governance of frontier AI.",
-  },
-  {
-    name: "Yoshua Bengio",
-    affiliation: "Universite de Montreal, LawZero, and Mila",
-    bio: "Yoshua Bengio is a Full Professor of Computer Science at Universite de Montreal, Co-President and Scientific Director of LawZero, and the Founder and Scientific Advisor of Mila. Organizer correspondence captured in the workshop working doc confirms his participation after proposal acceptance.",
-    focus: "Additional confirmed invited participation after proposal acceptance",
-    profileUrl: "https://yoshuabengio.org/en",
-    imageUrl: "/people/yoshua-bengio.jpg",
-    statusLabel: "Confirmed after proposal",
-    postProposal: true,
-    note: "The embedded workshop-doc email confirms participation, while travel mode may still need final coordination.",
   },
 ];
 

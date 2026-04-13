@@ -2,7 +2,6 @@ import Link from "next/link";
 
 import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
-import { Divider } from "@/components/Divider";
 import { Footer } from "@/components/Footer";
 import { PersonCard } from "@/components/PersonCard";
 import {
@@ -20,82 +19,98 @@ export default function Home() {
       <Navbar />
       <main className="pt-16">
         <HeroSection />
-        <Divider />
 
-        <section className="py-14">
+        {/* Why This Workshop */}
+        <section className="bg-white py-20">
           <div className="mx-auto max-w-[1154px] px-4">
-            <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr]">
+            <div className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr]">
               <div>
-                <h1 className="text-left">Why This Workshop</h1>
-                <div className="mt-8 space-y-5 text-[18px] leading-[30px] text-[#201a14]">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-indigo-500">
+                  Overview
+                </p>
+                <h1 className="mt-4 text-left">Why This Workshop</h1>
+                <div className="mt-8 space-y-5 text-[17px] leading-[1.72] text-slate-600">
                   {overviewParagraphs.map((paragraph) => (
                     <p key={paragraph}>{paragraph}</p>
                   ))}
                 </div>
               </div>
 
-              <div className="rounded-[32px] border border-[#d8d3ca] bg-[#f6f1e8] p-7">
-                <p className="text-[14px] font-semibold uppercase tracking-[0.16em] text-[#7c6245]">
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-7">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-indigo-500">
                   Current status
                 </p>
-                <p className="mt-4 text-[18px] leading-[30px] text-[#2a2016]">
+                <p className="mt-4 text-[17px] leading-[1.72] text-slate-800">
                   {site.status}
                 </p>
-                <p className="mt-5 text-[16px] leading-[26px] text-[#5b4630]">
+                <p className="mt-5 text-[15px] leading-[1.65] text-slate-600">
                   {site.formatNote}
                 </p>
-                <p className="mt-5 text-[16px] leading-[26px] text-[#5b4630]">
+                <p className="mt-4 text-[15px] leading-[1.65] text-slate-600">
                   {site.venueNote}
                 </p>
               </div>
             </div>
           </div>
         </section>
-        <Divider />
 
-        <section className="py-14">
+        {/* Call for Contributions */}
+        <section className="bg-slate-50 py-20">
           <div className="mx-auto max-w-[1154px] px-4">
-            <h1>Call for Contributions</h1>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-indigo-500">
+              Call for Contributions
+            </p>
+            <h1 className="mt-4 text-left">What We&rsquo;re Looking For</h1>
             <div className="mt-10 grid gap-6 lg:grid-cols-3">
-              {focusAreas.map((area) => (
+              {focusAreas.map((area, i) => (
                 <article
                   key={area.title}
-                  className="rounded-[28px] border border-[#d8d3ca] bg-white p-7 shadow-[0_14px_32px_rgba(52,39,22,0.05)]"
+                  className="rounded-xl border border-slate-200 bg-white p-7 shadow-[0_2px_8px_rgba(15,23,42,0.04)]"
                 >
-                  <h2 className="text-left text-[28px] font-bold leading-[34px] text-[#3b2d1f]">
+                  <span className="text-[11px] font-semibold uppercase tracking-[0.14em] text-indigo-400">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <h2 className="mt-3 text-left text-[19px] font-semibold text-slate-900">
                     {area.title}
                   </h2>
-                  <p className="mt-4 text-[17px] leading-[28px] text-[#201a14]">
+                  <p className="mt-3 text-[15px] leading-[1.72] text-slate-600">
                     {area.description}
                   </p>
                 </article>
               ))}
             </div>
-            <div className="mt-8 rounded-[28px] border border-[#d8d3ca] bg-[#f6f1e8] p-7">
-              <ul className="space-y-3 text-[17px] leading-[28px] text-[#2a2016]">
+            <div className="mt-6 rounded-xl border border-slate-200 bg-white p-7">
+              <ul className="space-y-3 text-[15px] leading-[1.72] text-slate-700">
                 {contributionNotes.map((note) => (
-                  <li key={note}>{note}</li>
+                  <li key={note} className="flex gap-3">
+                    <span className="mt-[9px] h-1.5 w-1.5 shrink-0 rounded-full bg-indigo-400" />
+                    {note}
+                  </li>
                 ))}
               </ul>
             </div>
           </div>
         </section>
-        <Divider />
 
-        <section className="py-14">
+        {/* Invited Speakers */}
+        <section className="bg-white py-20">
           <div className="mx-auto max-w-[1154px] px-4">
             <div className="flex items-end justify-between gap-6">
               <div>
-                <h1 className="text-left">Invited Speakers</h1>
-                <p className="mt-4 max-w-[760px] text-[18px] leading-[30px] text-[#201a14]">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-indigo-500">
+                  Invited Speakers
+                </p>
+                <h1 className="mt-4 text-left">Invited Speakers</h1>
+                <p className="mt-4 max-w-[640px] text-[17px] leading-[1.72] text-slate-600">
                   The proposed program covers failure mechanisms, diagnostics,
-                  evaluation, security, and practical deployment. Speaker
-                  details below reflect the current workshop proposal and
-                  organizer notes.
+                  evaluation, security, and practical deployment.
                 </p>
               </div>
-              <Link href="/speakers" className="text-[16px] font-semibold">
-                View all speakers
+              <Link
+                href="/speakers"
+                className="shrink-0 text-[14px] font-semibold text-indigo-600 no-underline hover:text-indigo-500"
+              >
+                View all speakers →
               </Link>
             </div>
 
@@ -106,21 +121,24 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <Divider />
 
-        <section className="py-14">
+        {/* Workshop Logistics */}
+        <section className="bg-slate-50 py-20">
           <div className="mx-auto max-w-[1154px] px-4">
-            <h1 className="text-left">Workshop Logistics</h1>
-            <div className="mt-10 grid gap-6 md:grid-cols-3">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-indigo-500">
+              Logistics
+            </p>
+            <h1 className="mt-4 text-left">Workshop Logistics</h1>
+            <div className="mt-10 grid gap-6 sm:grid-cols-2">
               {resources.map((resource) => (
                 <article
                   key={resource.label}
-                  className="rounded-[28px] border border-[#d8d3ca] bg-white p-7"
+                  className="rounded-xl border border-slate-200 bg-white p-7"
                 >
-                  <p className="text-[14px] font-semibold uppercase tracking-[0.16em] text-[#7c6245]">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-indigo-500">
                     {resource.label}
                   </p>
-                  <p className="mt-4 text-[18px] leading-[29px] text-[#2a2016]">
+                  <p className="mt-4 text-[15px] leading-[1.72] text-slate-700">
                     {resource.detail}
                   </p>
                 </article>
@@ -128,23 +146,42 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <Divider />
 
-        <section className="py-14">
+        {/* Stay in Touch */}
+        <section
+          className="py-20"
+          style={{
+            background:
+              "radial-gradient(ellipse at 80% 50%, rgba(79,70,229,0.15) 0%, transparent 55%), #0f172a",
+          }}
+        >
           <div className="mx-auto max-w-[1154px] px-4">
-            <div className="rounded-[36px] border border-[#d8d3ca] bg-[#f6f1e8] p-8 md:p-10">
-              <h1 className="text-left">Stay in Touch</h1>
-              <p className="mt-6 max-w-[780px] text-[18px] leading-[30px] text-[#201a14]">
-                We are using this site as the working home for the FMAI
-                workshop. If you want to ask about submissions, sponsorship, or
-                program details, email{" "}
-                <a href={`mailto:${site.contactEmails[0]}`}>{site.contactEmails[0]}</a>{" "}
-                or{" "}
-                <a href={`mailto:${site.contactEmails[1]}`}>{site.contactEmails[1]}</a>.
-              </p>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-indigo-400">
+              Contact
+            </p>
+            <h1 className="mt-4 text-left text-slate-50">Stay in Touch</h1>
+            <p className="mt-6 max-w-[640px] text-[17px] leading-[1.72] text-slate-400">
+              We are using this site as the working home for the FMAI workshop.
+              If you want to ask about submissions, sponsorship, or program
+              details, reach out directly.
+            </p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a
+                href={`mailto:${site.contactEmails[0]}`}
+                className="inline-flex items-center justify-center rounded-lg bg-indigo-600 px-6 py-3 text-[15px] font-semibold text-white no-underline transition-all hover:bg-indigo-500 hover:shadow-[0_0_0_3px_rgba(99,102,241,0.28)]"
+              >
+                {site.contactEmails[0]}
+              </a>
+              <a
+                href={`mailto:${site.contactEmails[1]}`}
+                className="inline-flex items-center justify-center rounded-lg border border-slate-600 px-6 py-3 text-[15px] font-semibold text-slate-300 no-underline transition-all hover:border-slate-400 hover:text-white"
+              >
+                {site.contactEmails[1]}
+              </a>
             </div>
           </div>
         </section>
+
         <Footer />
       </main>
     </>

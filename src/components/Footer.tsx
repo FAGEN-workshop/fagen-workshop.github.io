@@ -2,18 +2,29 @@ import { site } from "@/lib/workshop-data";
 
 export function Footer() {
   return (
-    <footer className="border-t border-[#d9d3c8] bg-[#f6f1e8] py-10">
+    <footer className="border-t border-slate-800 bg-slate-900 py-12">
       <div className="mx-auto max-w-[1154px] px-4 text-center">
-        <p className="text-[18px] font-semibold leading-[28px] text-[#2a2016]">
-          {site.fullTitle}
-        </p>
-        <p className="mt-2 text-[16px] leading-[25px] text-[#5b4630]">
+        <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-indigo-400">
           {site.conferenceLabel}
         </p>
-        <p className="mt-3 text-[15px] leading-[24px] text-[#6a533c]">
+        <p className="mt-3 text-[17px] font-semibold leading-[1.45] text-slate-100">
+          {site.shortTitle} — Failure Modes in Agentic AI
+        </p>
+        <p className="mt-4 text-[14px] leading-[1.6] text-slate-500">
           Contact:{" "}
-          <a href={`mailto:${site.contactEmails[0]}`}>{site.contactEmails[0]}</a>{" "}
-          and <a href={`mailto:${site.contactEmails[1]}`}>{site.contactEmails[1]}</a>
+          <a
+            href={`mailto:${site.contactEmails[0]}`}
+            className="text-indigo-400 hover:text-indigo-300"
+          >
+            {site.contactEmails[0]}
+          </a>{" "}
+          and{" "}
+          <a
+            href={`mailto:${site.contactEmails[1]}`}
+            className="text-indigo-400 hover:text-indigo-300"
+          >
+            {site.contactEmails[1]}
+          </a>
         </p>
       </div>
     </footer>
