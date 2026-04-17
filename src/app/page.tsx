@@ -43,6 +43,17 @@ export default function Home() {
                 <p className="mt-4 text-[17px] leading-[1.72] text-slate-800">
                   {site.status}
                 </p>
+                <div className="mt-5 rounded-lg border border-indigo-200 bg-white px-4 py-3">
+                  <p className="text-[12px] font-semibold uppercase tracking-[0.14em] text-indigo-500">
+                    Submission deadline
+                  </p>
+                  <p className="mt-2 text-[15px] font-medium text-slate-900">
+                    {site.submissionDeadlineUtc}
+                  </p>
+                  <p className="mt-1 text-[14px] text-slate-600">
+                    Chicago time: {site.submissionDeadlineLocal}
+                  </p>
+                </div>
                 <p className="mt-5 text-[15px] leading-[1.65] text-slate-600">
                   {site.formatNote}
                 </p>
@@ -54,13 +65,13 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Call for Contributions */}
+        {/* Topics of Interest */}
         <section className="bg-slate-50 py-20">
           <div className="mx-auto max-w-[1154px] px-4">
             <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-indigo-500">
-              Call for Contributions
+              Topics of Interest
             </p>
-            <h1 className="mt-4 text-left">What We&rsquo;re Looking For</h1>
+            <h1 className="mt-4 text-left">What Fits FMAI</h1>
             <div className="mt-10 grid gap-6 lg:grid-cols-3">
               {focusAreas.map((area, i) => (
                 <article
@@ -165,18 +176,12 @@ export default function Home() {
               If you want to ask about submissions, sponsorship, or program
               details, reach out directly.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-8 flex">
               <a
-                href={`mailto:${site.contactEmails[0]}`}
+                href={`mailto:${site.contactEmail}`}
                 className="inline-flex items-center justify-center rounded-lg bg-indigo-600 px-6 py-3 text-[15px] font-semibold text-white no-underline transition-all hover:bg-indigo-500 hover:shadow-[0_0_0_3px_rgba(99,102,241,0.28)]"
               >
-                {site.contactEmails[0]}
-              </a>
-              <a
-                href={`mailto:${site.contactEmails[1]}`}
-                className="inline-flex items-center justify-center rounded-lg border border-slate-600 px-6 py-3 text-[15px] font-semibold text-slate-300 no-underline transition-all hover:border-slate-400 hover:text-white"
-              >
-                {site.contactEmails[1]}
+                {site.contactEmail}
               </a>
             </div>
           </div>

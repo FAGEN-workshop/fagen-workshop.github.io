@@ -20,8 +20,8 @@ export default function ContactPage() {
             <h1 className="mt-4">Contact</h1>
 
             <p className="mx-auto mt-8 max-w-[740px] text-center text-[17px] leading-[1.72] text-slate-600">
-              This site is the public home for the FMAI workshop as details are
-              finalized. Reach out if you want to discuss submissions,
+              This site is the public home for the FMAI workshop. Reach out if
+              you want to discuss submissions,
               sponsorship, speaker logistics, or collaboration.
             </p>
 
@@ -43,20 +43,15 @@ export default function ContactPage() {
 
             <div className="mx-auto mt-10 max-w-[860px] rounded-xl border border-slate-200 bg-slate-50 p-8 text-[15px] leading-[1.72] text-slate-700">
               <p>
-                General inquiries:{" "}
-                <a href={`mailto:${site.contactEmails[0]}`}>
-                  {site.contactEmails[0]}
-                </a>
-              </p>
-              <p className="mt-3">
-                Program and organizer coordination:{" "}
-                <a href={`mailto:${site.contactEmails[1]}`}>
-                  {site.contactEmails[1]}
+                Workshop email:{" "}
+                <a href={`mailto:${site.contactEmail}`}>
+                  {site.contactEmail}
                 </a>
               </p>
               <p className="mt-5 text-slate-600">
-                We will add the final submission portal, sponsorship details,
-                and workshop logistics here once they are public.
+                OpenReview submissions are now live. We will continue updating
+                sponsorship details and workshop logistics here as they are
+                finalized.
               </p>
             </div>
           </div>

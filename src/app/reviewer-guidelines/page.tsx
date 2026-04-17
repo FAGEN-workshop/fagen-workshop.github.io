@@ -22,8 +22,8 @@ export default function ReviewerGuidelinesPage() {
             <div className="mx-auto mt-10 max-w-[860px] space-y-5 text-[17px] leading-[1.72] text-slate-600">
               <p>
                 Reviewer guidelines, area-chair responsibilities, and
-                evaluation timelines will be published once the submission
-                portal opens and the workshop review process is finalized.
+                evaluation timelines will be published after submissions close
+                and the workshop review process is finalized.
               </p>
               <p>
                 The accepted workshop proposal already commits to careful
@@ -35,14 +35,7 @@ export default function ReviewerGuidelinesPage() {
                 <p className="text-[15px] text-slate-700">
                   If you need to reach the organizers before the formal review
                   page is live, email{" "}
-                  <a href={`mailto:${site.contactEmails[0]}`}>
-                    {site.contactEmails[0]}
-                  </a>{" "}
-                  or{" "}
-                  <a href={`mailto:${site.contactEmails[1]}`}>
-                    {site.contactEmails[1]}
-                  </a>
-                  .
+                  <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>.
                 </p>
               </div>
             </div>

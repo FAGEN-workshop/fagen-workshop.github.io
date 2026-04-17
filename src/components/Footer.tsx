@@ -13,17 +13,10 @@ export function Footer() {
         <p className="mt-4 text-[14px] leading-[1.6] text-slate-500">
           Contact:{" "}
           <a
-            href={`mailto:${site.contactEmails[0]}`}
+            href={`mailto:${site.contactEmail}`}
             className="text-indigo-400 hover:text-indigo-300"
           >
-            {site.contactEmails[0]}
-          </a>{" "}
-          and{" "}
-          <a
-            href={`mailto:${site.contactEmails[1]}`}
-            className="text-indigo-400 hover:text-indigo-300"
-          >
-            {site.contactEmails[1]}
+            {site.contactEmail}
           </a>
         </p>
       </div>

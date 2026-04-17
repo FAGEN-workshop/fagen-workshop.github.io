@@ -23,15 +23,13 @@ export default function PapersPage() {
               </p>
               <p>
                 For now, the best place to track the workshop is the main site
-                and the call-for-contributions page. We will update this page
-                once final decisions, awards, and artifact links are public.
+                and the submit paper page. We will update this page once final
+                decisions, awards, and artifact links are public.
               </p>
               <div className="rounded-[28px] border border-[#d8d3ca] bg-[#f6f1e8] p-7">
                 <p>
                   Questions about this page can be sent to{" "}
-                  <a href={`mailto:${site.contactEmails[0]}`}>{site.contactEmails[0]}</a>{" "}
-                  or{" "}
-                  <a href={`mailto:${site.contactEmails[1]}`}>{site.contactEmails[1]}</a>.
+                  <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>.
                 </p>
               </div>
             </div>

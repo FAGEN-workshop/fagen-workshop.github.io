@@ -13,7 +13,7 @@ const infoItems = [
   },
   {
     label: "Status",
-    text: "Submission portal and final deadlines are still being finalized.",
+    text: `OpenReview submissions are now open. Deadline: ${site.submissionDeadlineUtc}.`,
   },
 ];
 
@@ -62,7 +62,7 @@ export function HeroSection() {
             href="/submit"
             className="inline-flex items-center justify-center rounded-lg bg-indigo-600 px-6 py-3 text-[15px] font-semibold text-white no-underline transition-all hover:bg-indigo-500 hover:shadow-[0_0_0_3px_rgba(99,102,241,0.28)]"
           >
-            View Call for Contributions
+            Submit Paper
           </Link>
           <Link
             href="/schedule"
@@ -71,6 +71,9 @@ export function HeroSection() {
             See Tentative Schedule
           </Link>
         </div>
+        <p className="mt-4 text-[14px] text-slate-400">
+          {site.submissionAccountNote}
+        </p>
 
         {/* Info row */}
         <div className="mt-12 border-t border-slate-700/60 pt-8">

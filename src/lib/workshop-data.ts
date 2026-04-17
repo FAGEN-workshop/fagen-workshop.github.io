@@ -29,6 +29,11 @@ export interface ScheduleItem {
   note?: string;
 }
 
+export interface SubmissionDetail {
+  label: string;
+  detail: string;
+}
+
 export const site = {
   shortTitle: "FMAI",
   fullTitle:
@@ -37,15 +42,20 @@ export const site = {
   domain: "fmai-workshop.github.io",
   description:
     "FMAI is an ICML 2026 workshop on actionable failure modes in agentic AI, centered on reproducible triggers, trace diagnostics, and verified fixes.",
+  openReviewUrl:
+    "https://openreview.net/group?id=ICML.cc/2026/Workshop/FMAI#tab-recent-activity",
+  submissionDeadlineUtc: "May 4, 2026, 11:59 PM UTC",
+  submissionDeadlineLocal: "May 4, 2026, 6:59 PM CDT",
+  submissionAccountNote: "Requires an OpenReview account.",
   heroBlurb:
     "Foundation-model agents are now deployed in browsing, scientific analysis, and long-horizon decision-making. FMAI creates a focused venue for turning agent failures into concrete research assets: clear definitions, reproducible triggers, comparable diagnostics, and verified repair strategies.",
   status:
-    "Submission portal, final deadlines, and room assignment will be announced once the ICML workshop portal is finalized.",
+    "OpenReview submissions are now open for FMAI. See the deadline below and submit through the official venue page.",
   formatNote:
     "The accepted proposal plans a fully in-person workshop with keynote talks, contributed spotlights, posters, and a panel discussion. Livestreaming and fallback remote support may be arranged for exceptional cases.",
   venueNote:
     "Workshop date, room, and camera-ready timeline are still to be published through the official ICML 2026 workshop schedule.",
-  contactEmails: ["zihanw@u.northwestern.edu", "manling.li@northwestern.edu"],
+  contactEmail: "fmaiworkshop@gmail.com",
 };
 
 export const pcOverview =
@@ -53,7 +63,7 @@ export const pcOverview =
 
 export const navigation: NavItem[] = [
   { label: "Home", href: "/" },
-  { label: "Call for Contributions", href: "/submit" },
+  { label: "Submit Paper", href: "/submit" },
   { label: "Speakers", href: "/speakers" },
   { label: "Schedule", href: "/schedule" },
   { label: "Organizers", href: "/organizers" },
@@ -85,9 +95,43 @@ export const focusAreas: FocusArea[] = [
 ];
 
 export const contributionNotes = [
-  "FMAI welcomes research that makes agent failures reproducible, measurable, and fixable.",
+  "OpenReview submissions are now open for FMAI.",
+  "Submission deadline: May 4, 2026, 11:59 PM UTC (May 4, 2026, 6:59 PM CDT).",
+  "Submit through the official OpenReview venue page. An OpenReview account is required.",
   "High-quality negative results are encouraged when they include controlled failure cases, clear attribution, and transferable lessons for the field.",
-  "Final submission instructions, reviewer information, and official deadlines will be posted once the workshop submission portal is live.",
+];
+
+export const submissionDetails: SubmissionDetail[] = [
+  {
+    label: "Title",
+    detail: "Provide a paper title of up to 250 characters.",
+  },
+  {
+    label: "Authors",
+    detail:
+      "Add author OpenReview profiles when available, or author email addresses if a profile is not found.",
+  },
+  {
+    label: "Keywords",
+    detail: "Prepare a comma-separated list of keywords for your submission.",
+  },
+  {
+    label: "TL;DR",
+    detail: "An optional one-sentence summary can be included, up to 250 characters.",
+  },
+  {
+    label: "Abstract",
+    detail: "Prepare an abstract of up to 5000 characters.",
+  },
+  {
+    label: "PDF",
+    detail: "Upload a PDF only, with a maximum file size of 50MB.",
+  },
+  {
+    label: "License",
+    detail:
+      "OpenReview requires a license selection when you complete the submission form.",
+  },
 ];
 
 export const speakers: Person[] = [
@@ -332,8 +376,8 @@ export const schedule: ScheduleItem[] = [
 
 export const resources = [
   {
-    label: "Primary contacts",
-    detail: "zihanw@u.northwestern.edu and manling.li@northwestern.edu",
+    label: "Primary contact",
+    detail: "fmaiworkshop@gmail.com",
   },
   {
     label: "Current sponsor",
@@ -341,7 +385,8 @@ export const resources = [
   },
   {
     label: "Submission status",
-    detail: "OpenReview and workshop-portal details are still being finalized. The link in the working doc currently points to the proposal author console rather than a public submission page.",
+    detail:
+      "OpenReview submissions are now open. Deadline: May 4, 2026, 11:59 PM UTC (May 4, 2026, 6:59 PM CDT).",
   },
   {
     label: "Website",
