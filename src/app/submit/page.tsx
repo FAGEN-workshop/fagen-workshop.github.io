@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { LocalDeadline } from "@/components/LocalDeadline";
 import { focusAreas, site, submissionDetails } from "@/lib/workshop-data";
 
 export const metadata = {
@@ -36,7 +37,7 @@ export default function SubmitPage() {
                     {site.submissionDeadlineUtc}
                   </h2>
                   <p className="mt-3 text-[15px] leading-[1.72] text-slate-700">
-                    Chicago time: {site.submissionDeadlineLocal}
+                    <LocalDeadline isoUtc={site.submissionDeadlineIso} />
                   </p>
                   <p className="mt-4 text-[14px] font-medium text-slate-600">
                     {site.submissionAccountNote}

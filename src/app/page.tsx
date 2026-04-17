@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
 import { Footer } from "@/components/Footer";
+import { LocalDeadline } from "@/components/LocalDeadline";
 import { PersonCard } from "@/components/PersonCard";
 import {
   contributionNotes,
@@ -51,7 +52,7 @@ export default function Home() {
                     {site.submissionDeadlineUtc}
                   </p>
                   <p className="mt-1 text-[14px] text-slate-600">
-                    Chicago time: {site.submissionDeadlineLocal}
+                    <LocalDeadline isoUtc={site.submissionDeadlineIso} />
                   </p>
                 </div>
                 <p className="mt-5 text-[15px] leading-[1.65] text-slate-600">

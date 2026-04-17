@@ -45,7 +45,7 @@ export const site = {
   openReviewUrl:
     "https://openreview.net/group?id=ICML.cc/2026/Workshop/FMAI#tab-recent-activity",
   submissionDeadlineUtc: "May 4, 2026, 11:59 PM UTC",
-  submissionDeadlineLocal: "May 4, 2026, 6:59 PM CDT",
+  submissionDeadlineIso: "2026-05-04T23:59:00Z",
   submissionAccountNote: "Requires an OpenReview account.",
   heroBlurb:
     "Foundation-model agents are now deployed in browsing, scientific analysis, and long-horizon decision-making. FMAI creates a focused venue for turning agent failures into concrete research assets: clear definitions, reproducible triggers, comparable diagnostics, and verified repair strategies.",
