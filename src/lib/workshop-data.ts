@@ -45,7 +45,7 @@ export const site = {
   description:
     "ICML 2026 workshop on actionable failure modes in agentic AI: reproducible triggers, trace diagnostics, and verified fixes.",
   heroBlurb:
-    "Foundation-model agents fail in ways that compound across tool calls, memory, and recovery. FMAI turns these failures into research artifacts: precise definitions, reproducible triggers, trace diagnostics, and verified fixes.",
+    "Foundation-model agents fail in ways that compound across tool calls, memory, and recovery. FMAI is a venue for research that defines these failures, reproduces them, diagnoses traces, and verifies fixes.",
   openReviewUrl:
     "https://openreview.net/group?id=ICML.cc/2026/Workshop/FMAI#tab-recent-activity",
   submissionDeadlineLabel: "May 8, 2026 (AOE)",
@@ -66,8 +66,8 @@ export const navigation: NavItem[] = [
 ];
 
 export const overviewParagraphs = [
-  "Agent quality is governed by long-horizon interaction. Small stepwise mistakes compound through tool calls, memory writes, and recovery decisions — shifting the reliability and safety of the whole system.",
-  "FMAI treats failures as first-class research objects. We push toward four deliverables: operational definitions, reproducible triggers, comparable diagnostics, and verified fixes.",
+  "Agent quality depends on long-horizon interaction. Small mistakes at each step compound through tool calls, memory writes, and recovery decisions, shifting the reliability and safety of the whole system.",
+  "FMAI focuses on four research outputs: operational definitions, reproducible triggers, comparable diagnostics, and verified fixes.",
 ];
 
 export const focusAreas: FocusArea[] = [
@@ -92,7 +92,7 @@ export const focusAreas: FocusArea[] = [
 // once the sponsoring organization is confirmed.
 export const cfpBullets = [
   "ICML template, max 8 pages including references and appendix.",
-  "Non-archival — authors retain rights and can publish elsewhere.",
+  "Non-archival venue. Authors retain rights and can publish their work elsewhere.",
   "Dual submission is allowed.",
   "Accepted papers are eligible for a Best Paper Award.",
 ];
@@ -291,12 +291,12 @@ export const schedule: ScheduleItem[] = [
   {
     time: "08:10 - 08:50",
     event: "Keynote 1",
-    detail: "James Zou",
+    detail: "TBD",
   },
   {
     time: "08:50 - 09:30",
     event: "Keynote 2",
-    detail: "Bo Li",
+    detail: "TBD",
   },
   {
     time: "09:30 - 10:10",
@@ -310,12 +310,12 @@ export const schedule: ScheduleItem[] = [
   {
     time: "10:40 - 11:20",
     event: "Keynote 3",
-    detail: "Iryna Gurevych",
+    detail: "TBD",
   },
   {
     time: "11:20 - 12:00",
     event: "Keynote 4",
-    detail: "Greg Durrett",
+    detail: "TBD",
   },
   {
     time: "12:00 - 14:00",
@@ -324,12 +324,12 @@ export const schedule: ScheduleItem[] = [
   {
     time: "14:00 - 14:40",
     event: "Keynote 5",
-    detail: "Samy Bengio",
+    detail: "TBD",
   },
   {
     time: "14:40 - 15:20",
     event: "Keynote 6",
-    detail: "Nouha Dziri",
+    detail: "TBD",
   },
   {
     time: "15:20 - 15:50",
@@ -338,7 +338,7 @@ export const schedule: ScheduleItem[] = [
   {
     time: "15:50 - 16:50",
     event: "Panel discussion",
-    detail: "Maarten Sap, Yi Dong, Yu Su, Nouha Dziri, and Bo Li",
+    detail: "Panelists TBD",
   },
   {
     time: "16:50 - 17:00",

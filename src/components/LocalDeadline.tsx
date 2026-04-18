@@ -25,7 +25,7 @@ export function LocalDeadline({ isoUtc }: LocalDeadlineProps) {
   const date = new Date(isoUtc);
   if (Number.isNaN(date.getTime())) return null;
 
-  const formatter = new Intl.DateTimeFormat(undefined, {
+  const formatter = new Intl.DateTimeFormat("en-US", {
     year: "numeric",
     month: "long",
     day: "numeric",

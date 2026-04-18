@@ -8,7 +8,7 @@ export function Footer() {
           {site.conferenceLabel}
         </p>
         <p className="mt-3 text-[17px] font-semibold leading-[1.45] text-slate-100">
-          {site.shortTitle} — Failure Modes in Agentic AI
+          Failure Modes in Agentic AI
         </p>
         <p className="mt-4 text-[14px] leading-[1.6] text-slate-500">
           Contact:{" "}

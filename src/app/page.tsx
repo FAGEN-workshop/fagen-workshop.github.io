@@ -92,14 +92,13 @@ export default function Home() {
                 Topics of Interest
               </p>
               <p className="mt-5 max-w-[760px] text-[16px] leading-[1.72] text-slate-600">
-                We welcome work that turns messy agent behavior into concrete
-                research artifacts:
+                We welcome submissions on:
               </p>
               <ul className="mt-5 max-w-[760px] space-y-2.5 text-[15px] leading-[1.7] text-slate-700">
                 {topicsOfInterest.map((topic) => (
                   <li key={topic} className="flex gap-4">
                     <span className="font-mono shrink-0 pt-[2px] text-[11px] text-[#8aa8cc]">
-                      —
+                      ·
                     </span>
                     <span>{topic}</span>
                   </li>
@@ -157,16 +156,13 @@ export default function Home() {
                   <LocalDeadline isoUtc={site.submissionDeadlineIso} />
                 </p>
               </div>
-              <p className="mt-4 text-[14px] leading-[1.65] text-slate-500">
-                Hard deadline. No extensions.
-              </p>
             </div>
 
             {/* Suggested — quieter, flat, inline */}
             <div className="mt-14 max-w-[640px] border-t border-[#d8dde5] pt-6">
               <div className="flex flex-wrap items-baseline gap-x-5 gap-y-2">
                 <span className="font-mono text-[11px] font-medium uppercase tracking-[0.12em] text-slate-500">
-                  Suggested
+                  Suggested submission
                 </span>
                 <span className="font-mono text-[18px] font-medium tracking-[-0.01em] text-[#1d1d1f]">
                   2026-04-24
@@ -192,8 +188,8 @@ export default function Home() {
             <p className={eyebrowClass}>Invited Speakers</p>
             <h2 className={sectionHeadingClass}>Speakers</h2>
             <p className="mt-6 max-w-[780px] text-[17px] leading-[1.72] text-slate-600">
-              The lineup covers the full agent-failure pipeline: mechanisms,
-              diagnostics, security, evaluation, and practical fixes.
+              Speakers cover mechanisms, diagnostics, security, evaluation,
+              and practical fixes for agent failures.
             </p>
             <div className="mx-auto mt-12 flex max-w-[880px] flex-wrap justify-center gap-x-8 gap-y-12">
               {speakers.map((speaker) => (
@@ -250,8 +246,8 @@ export default function Home() {
             <p className={eyebrowClass}>Team</p>
             <h2 className={sectionHeadingClass}>Organizers</h2>
             <p className="mt-6 max-w-[780px] text-[17px] leading-[1.72] text-slate-600">
-              The organizing team covers the full failure-mode stack: training,
-              evaluation, safety, grounding, security, and execution.
+              The organizers work on training, evaluation, safety, grounding,
+              security, and workshop execution.
             </p>
             <div className="mt-12 flex flex-wrap justify-center gap-x-8 gap-y-12">
               {organizers.map((organizer) => (
