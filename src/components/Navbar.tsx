@@ -5,6 +5,7 @@ import { Menu, X } from "lucide-react";
 import Link from "next/link";
 
 import { navigation } from "@/lib/workshop-data";
+import { withBasePath } from "@/lib/site-path";
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -48,16 +49,21 @@ export function Navbar() {
           {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
 
-        <Link href="/" className="flex items-center gap-2.5 no-underline">
-          <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#a3bdd8]">
-            ICML 2026
-          </span>
+        <Link
+          href="/"
+          className="flex items-center gap-3 no-underline"
+          aria-label="FMAI Workshop home"
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={withBasePath("/branding/fmai-pin.png")}
+            alt=""
+            className="h-9 w-9 shrink-0 rounded-full"
+          />
+          <span className="text-[15px] font-semibold text-slate-100">FMAI</span>
           <span className="hidden text-slate-700 sm:inline">/</span>
-          <span className="hidden text-[15px] font-semibold text-slate-100 sm:inline">
-            Failure Modes in Agentic AI
-          </span>
-          <span className="text-[15px] font-semibold text-slate-100 sm:hidden">
-            FMAI
+          <span className="hidden text-[11px] font-semibold uppercase tracking-[0.18em] text-[#a3bdd8] sm:inline">
+            ICML 2026
           </span>
         </Link>
 
