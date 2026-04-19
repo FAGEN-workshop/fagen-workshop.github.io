@@ -19,6 +19,7 @@ export interface Person {
   role?: string;
   profileUrl?: string;
   imageUrl?: string;
+  imagePosition?: string;
   assets?: string[];
   note?: string;
 }
@@ -34,6 +35,9 @@ export interface Sponsor {
   name: string;
   url: string;
   logo?: string;
+  /** Optional Tailwind max-height class to override the default `max-h-12`.
+   *  Use this for square-aspect logos that look smaller than wide text logos. */
+  maxHeightClass?: string;
 }
 
 export const site = {
@@ -104,12 +108,19 @@ export const topicsOfInterest = [
   "Mitigation, repair, or intervention strategies with explicit evidence about what improves and what does not.",
 ];
 
-// TODO: Swap logo to an SVG/PNG in public/sponsors/ once assets are provided.
-// TODO: Confirm the correct sponsor homepage URLs before launch.
 export const sponsors: Sponsor[] = [
-  { name: "O2", url: "#" },
-  { name: "Abaka", url: "#" },
-  { name: "Eight Sleep", url: "#" },
+  {
+    name: "O2",
+    url: "https://o2tech.ai/",
+    logo: "/sponsors/o2.png",
+    maxHeightClass: "max-h-20",
+  },
+  { name: "Abaka", url: "https://www.abaka.ai", logo: "/sponsors/abaka.svg" },
+  {
+    name: "Eight Sleep",
+    url: "https://www.eightsleep.com/",
+    logo: "/sponsors/eightsleep.svg",
+  },
 ];
 
 export const speakers: Person[] = [
@@ -249,12 +260,19 @@ export const organizers: Person[] = [
     imageUrl: "/people/jaehun-jung.png",
   },
   {
+    name: "Andrew Zhou",
+    affiliation: "O2 Lab",
+    bio: "",
+    imageUrl: "/people/andrew-zhou.png",
+  },
+  {
     name: "Niloofar Mireshghallah",
     affiliation: "humans& and Carnegie Mellon University",
     role: "Panel",
     bio: "Niloofar Mireshghallah works at the intersection of privacy, NLP, and the societal implications of machine learning. She leads discussion design, panel structure, and community-engagement planning for the workshop.",
     profileUrl: "https://niloofar.info/",
     imageUrl: "/people/niloofar-mireshghallah.jpg",
+    imagePosition: "center 22%",
   },
   {
     name: "Yejin Choi",
@@ -271,6 +289,7 @@ export const organizers: Person[] = [
     bio: "Dawn Song is a Professor of Computer Science at UC Berkeley whose work focuses on security, privacy, adversarial robustness, and trustworthy machine learning in realistic deployment settings.",
     profileUrl: "https://dawnsong.io/",
     imageUrl: "/people/dawn-song.jpg",
+    imagePosition: "center 25%",
   },
   {
     name: "Manling Li",

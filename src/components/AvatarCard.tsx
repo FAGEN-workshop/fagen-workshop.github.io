@@ -23,6 +23,7 @@ export function AvatarCard({ person, showFocus = false }: AvatarCardProps) {
     <img
       src={imageSrc}
       alt={person.name}
+      style={{ objectPosition: person.imagePosition ?? "center" }}
       className="h-36 w-36 rounded-full border border-slate-200 object-cover"
     />
   ) : (

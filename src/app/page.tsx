@@ -3,6 +3,7 @@ import { HeroSection } from "@/components/HeroSection";
 import { Footer } from "@/components/Footer";
 import { LocalDeadline } from "@/components/LocalDeadline";
 import { AvatarCard } from "@/components/AvatarCard";
+import { withBasePath } from "@/lib/site-path";
 import {
   cfpBullets,
   focusAreas,
@@ -281,9 +282,9 @@ export default function Home() {
                   {sponsor.logo ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
-                      src={sponsor.logo}
+                      src={withBasePath(sponsor.logo)}
                       alt={`${sponsor.name} logo`}
-                      className="max-h-12 w-auto opacity-60 grayscale transition-all hover:opacity-100 hover:grayscale-0"
+                      className={`${sponsor.maxHeightClass ?? "max-h-12"} w-auto opacity-70 grayscale transition-all hover:opacity-100 hover:grayscale-0`}
                     />
                   ) : (
                     <span className="text-[18px] font-medium tracking-[-0.01em] text-slate-500 transition-colors hover:text-[#1d1d1f]">
