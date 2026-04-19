@@ -4,8 +4,22 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 
-import { navigation } from "@/lib/workshop-data";
+import { navigation, site } from "@/lib/workshop-data";
 import { withBasePath } from "@/lib/site-path";
+
+function XIcon({ size = 16 }: { size?: number }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+    </svg>
+  );
+}
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -84,6 +98,16 @@ export function Navbar() {
               </Link>
             );
           })}
+          <span className="mx-2 h-4 w-px bg-[#2c2c2e]" aria-hidden="true" />
+          <a
+            href={site.xUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Follow ${site.xHandle} on X`}
+            className="rounded-md p-2 text-slate-400 no-underline transition-colors hover:bg-white/6 hover:text-slate-100"
+          >
+            <XIcon size={15} />
+          </a>
         </nav>
       </div>
 
@@ -106,6 +130,16 @@ export function Navbar() {
               </Link>
             );
           })}
+          <a
+            href={site.xUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setMobileMenuOpen(false)}
+            className="mx-3 my-0.5 flex items-center gap-3 rounded-lg px-4 py-3 text-[15px] font-medium text-slate-400 no-underline transition-colors hover:bg-white/6 hover:text-slate-100"
+          >
+            <XIcon size={14} />
+            <span>Follow on X</span>
+          </a>
         </nav>
       )}
     </header>

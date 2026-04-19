@@ -319,12 +319,29 @@ export default function Home() {
               Reach out for submissions, sponsorship, speaker logistics, or
               collaboration.
             </p>
-            <div className="mt-8">
+            <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
               <a
                 href={`mailto:${site.contactEmail}`}
                 className="inline-flex items-center justify-center rounded-lg bg-[#6b8fbf] px-6 py-3 text-[15px] font-semibold text-white no-underline transition-all hover:bg-[#7fa2cf] hover:shadow-[0_0_0_3px_rgba(107,143,191,0.28)]"
               >
                 {site.contactEmail}
+              </a>
+              <a
+                href={site.xUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-[14px] text-slate-300 no-underline transition-colors hover:text-white"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+                Follow {site.xHandle}
               </a>
             </div>
           </div>

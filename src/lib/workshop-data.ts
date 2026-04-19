@@ -57,6 +57,8 @@ export const site = {
   suggestedDeadlineLabel: "April 24, 2026 (AOE)",
   suggestedDeadlineIso: "2026-04-25T11:59:00Z",
   contactEmail: "fmaiworkshop@gmail.com",
+  xUrl: "https://x.com/FmaiWorkshop",
+  xHandle: "@FmaiWorkshop",
 };
 
 export const navigation: NavItem[] = [
