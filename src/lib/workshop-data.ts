@@ -233,6 +233,7 @@ export const organizers: Person[] = [
     affiliation: "Northwestern University",
     role: "Workshop Operations",
     bio: "Zihan Wang is a PhD student at Northwestern University working on reinforcement learning for reasoning agents in multi-turn stochastic environments. He leads overall workshop operations, including submissions, program assembly, and day-of execution.",
+    profileUrl: "https://zihanwang314.github.io/",
     imageUrl: "/people/zihan-wang.png",
   },
   {
