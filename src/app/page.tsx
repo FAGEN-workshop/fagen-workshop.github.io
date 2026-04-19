@@ -186,10 +186,12 @@ export default function Home() {
         {/* Speakers */}
         <section id="speakers" className="scroll-mt-24 bg-[#eceff3] py-20">
           <div className="mx-auto max-w-[1154px] px-4">
-            <p className={eyebrowClass}>Invited Speakers</p>
-            <h2 className={sectionHeadingClass}>Speakers</h2>
+            <p className={eyebrowClass}>Program</p>
+            <h2 className="mt-4 text-left text-[clamp(24px,3vw,34px)] font-medium leading-[1.15] tracking-[-0.03em] text-[#1d1d1f]">
+              Tentative Speakers &amp; Panelists
+            </h2>
             <p className="mt-6 max-w-[780px] text-[17px] leading-[1.72] text-slate-600">
-              Speakers cover mechanisms, diagnostics, security, evaluation,
+              The lineup covers mechanisms, diagnostics, security, evaluation,
               and practical fixes for agent failures.
             </p>
             <div className="mx-auto mt-12 flex max-w-[880px] flex-wrap justify-center gap-x-8 gap-y-12">
@@ -264,7 +266,7 @@ export default function Home() {
             <p className={eyebrowClass}>Sponsors</p>
             <h2 className={sectionHeadingClass}>Sponsors</h2>
             <p className="mt-6 max-w-[780px] text-[17px] leading-[1.72] text-slate-600">
-              FMAI is supported by:
+              We sincerely thank the support from our sponsors:
             </p>
             <div className="mt-10 grid gap-6 sm:grid-cols-3">
               {sponsors.map((sponsor) => (

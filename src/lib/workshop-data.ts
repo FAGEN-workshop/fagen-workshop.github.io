@@ -95,9 +95,8 @@ export const focusAreas: FocusArea[] = [
 // TODO: Sponsor attribution for the Best Paper Award is pending — update copy
 // once the sponsoring organization is confirmed.
 export const cfpBullets = [
-  "ICML template, max 8 pages including references and appendix.",
-  "Non-archival venue. Authors retain rights and can publish their work elsewhere.",
-  "Dual submission is allowed.",
+  "Please use an ICML template for your submission. Max 8 pages excluding references and appendix.",
+  "This is a non-archival venue. Authors retain rights and can publish their work elsewhere. Dual submission is allowed.",
   "Accepted papers are eligible for a Best Paper Award.",
 ];
 
@@ -264,6 +263,7 @@ export const organizers: Person[] = [
     name: "Andrew Zhou",
     affiliation: "O2 Lab",
     bio: "",
+    profileUrl: "https://o2tech.ai/",
     imageUrl: "/people/andrew-zhou.png",
   },
   {
