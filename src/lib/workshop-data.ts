@@ -274,8 +274,7 @@ export const organizers: Person[] = [
     role: "Panel",
     bio: "Niloofar Mireshghallah works at the intersection of privacy, NLP, and the societal implications of machine learning. She leads discussion design, panel structure, and community-engagement planning for the workshop.",
     profileUrl: "https://niloofar.info/",
-    imageUrl: "/people/niloofar-mireshghallah.jpg",
-    imagePosition: "center 22%",
+    imageUrl: "/people/niloofar-mireshghallah.png",
   },
   {
     name: "Yejin Choi",
@@ -283,7 +282,7 @@ export const organizers: Person[] = [
     role: "Speaker and Awards",
     bio: "Yejin Choi is a Professor of Computer Science at Stanford and a Senior Fellow at HAI. Her research spans language, reasoning, model behavior, evaluation, and human-centered foundation models and agents.",
     profileUrl: "https://cs.stanford.edu/~yejin/",
-    imageUrl: "/people/yejin-choi.jpeg",
+    imageUrl: "/people/yejin-choi.png",
   },
   {
     name: "Dawn Song",
@@ -291,8 +290,7 @@ export const organizers: Person[] = [
     role: "Speaker and Awards",
     bio: "Dawn Song is a Professor of Computer Science at UC Berkeley whose work focuses on security, privacy, adversarial robustness, and trustworthy machine learning in realistic deployment settings.",
     profileUrl: "https://dawnsong.io/",
-    imageUrl: "/people/dawn-song.jpg",
-    imagePosition: "center 25%",
+    imageUrl: "/people/dawn-song.png",
   },
   {
     name: "Manling Li",
