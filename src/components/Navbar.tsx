@@ -85,9 +85,9 @@ export function Navbar() {
           {navigation.map((item) => {
             const isActive = item.anchor === activeAnchor;
             return (
-              <Link
+              <a
                 key={item.anchor}
-                href={item.href}
+                href={`#${item.anchor}`}
                 className={`rounded-md px-3 py-2 text-[14px] font-medium no-underline transition-all ${
                   isActive
                     ? "bg-white/10 text-white"
@@ -95,7 +95,7 @@ export function Navbar() {
                 }`}
               >
                 {item.label}
-              </Link>
+              </a>
             );
           })}
           <span className="mx-2 h-4 w-px bg-[#2c2c2e]" aria-hidden="true" />
@@ -116,9 +116,9 @@ export function Navbar() {
           {navigation.map((item) => {
             const isActive = item.anchor === activeAnchor;
             return (
-              <Link
+              <a
                 key={item.anchor}
-                href={item.href}
+                href={`#${item.anchor}`}
                 className={`mx-3 my-0.5 block rounded-lg px-4 py-3 text-[15px] font-medium no-underline transition-colors ${
                   isActive
                     ? "bg-white/10 text-white"
@@ -127,7 +127,7 @@ export function Navbar() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {item.label}
-              </Link>
+              </a>
             );
           })}
           <a
