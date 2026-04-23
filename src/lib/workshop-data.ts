@@ -273,7 +273,7 @@ export const organizers: Person[] = [
     affiliation: "humans& and Carnegie Mellon University",
     role: "Panel",
     bio: "Niloofar Mireshghallah works at the intersection of privacy, NLP, and the societal implications of machine learning. She leads discussion design, panel structure, and community-engagement planning for the workshop.",
-    profileUrl: "https://niloofar.info/",
+    profileUrl: "https://mireshghallah.github.io/",
     imageUrl: "/people/niloofar-mireshghallah.png",
   },
   {
@@ -281,7 +281,7 @@ export const organizers: Person[] = [
     affiliation: "Stanford University",
     role: "Speaker and Awards",
     bio: "Yejin Choi is a Professor of Computer Science at Stanford and a Senior Fellow at HAI. Her research spans language, reasoning, model behavior, evaluation, and human-centered foundation models and agents.",
-    profileUrl: "https://cs.stanford.edu/~yejin/",
+    profileUrl: "https://yejinc.github.io/",
     imageUrl: "/people/yejin-choi.png",
   },
   {
@@ -297,7 +297,7 @@ export const organizers: Person[] = [
     affiliation: "Northwestern University and Amazon Scholar",
     role: "Speaker and Awards",
     bio: "Manling Li is an Assistant Professor at Northwestern University whose research focuses on grounded reasoning and multimodal knowledge for foundation-model agents. She leads coverage of world-facing agent failures and grounding-related themes.",
-    profileUrl: "https://manlingli.github.io/",
+    profileUrl: "https://limanling.github.io/",
     imageUrl: "/people/manling-li.jpg",
   },
 ];
