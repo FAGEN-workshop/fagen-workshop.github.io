@@ -116,11 +116,17 @@ export const sponsors: Sponsor[] = [
     logo: "/sponsors/o2.png",
     maxHeightClass: "max-h-20",
   },
-  { name: "Abaka", url: "https://www.abaka.ai", logo: "/sponsors/abaka.svg" },
+  {
+    name: "Abaka",
+    url: "https://www.abaka.ai",
+    logo: "/sponsors/abaka.svg",
+    maxHeightClass: "h-11",
+  },
   {
     name: "Eight Sleep",
     url: "https://www.eightsleep.com/",
     logo: "/sponsors/eightsleep.svg",
+    maxHeightClass: "h-11",
   },
 ];
 
