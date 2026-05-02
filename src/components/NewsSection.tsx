@@ -25,9 +25,11 @@ export function NewsSection() {
                 <h3 className="text-[16px] font-medium leading-[1.4] text-[#1d1d1f]">
                   {item.title}
                 </h3>
-                <p className="mt-2 text-[14.5px] leading-[1.65] text-slate-600">
-                  {item.body}
-                </p>
+                {item.body && (
+                  <p className="mt-2 text-[14.5px] leading-[1.65] text-slate-600">
+                    {item.body}
+                  </p>
+                )}
                 {item.link && (
                   <a
                     href={item.link.href}

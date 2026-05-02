@@ -70,7 +70,7 @@ export function HeroSection() {
             href="#cfp"
             className="inline-flex items-center justify-center rounded-lg bg-[#6b8fbf] px-6 py-3 text-[15px] font-semibold text-white no-underline transition-all hover:bg-[#7fa2cf] hover:shadow-[0_0_0_3px_rgba(107,143,191,0.28)]"
           >
-            Read the Call for Papers
+            Call for Papers
           </Link>
           <Link
             href="#speakers"

@@ -37,7 +37,7 @@ export interface NewsItem {
   /** ISO date for sorting and machine readability (YYYY-MM-DD). */
   iso: string;
   title: string;
-  body: string;
+  body?: string;
   link?: { label: string; href: string };
 }
 
@@ -62,8 +62,8 @@ export const site = {
     "https://openreview.net/group?id=ICML.cc/2026/Workshop/FMAI#tab-recent-activity",
   submissionDeadlineLabel: "May 8, 2026 (AOE)",
   submissionDeadlineIso: "2026-05-09T11:59:00Z",
-  suggestedDeadlineLabel: "April 24, 2026 (AOE)",
-  suggestedDeadlineIso: "2026-04-25T11:59:00Z",
+  notificationDateLabel: "May 15, 2026 (AOE)",
+  notificationDateIso: "2026-05-16T11:59:00Z",
   contactEmail: "fmaiworkshop@gmail.com",
   xUrl: "https://x.com/FmaiWorkshop",
   xHandle: "@FmaiWorkshop",
@@ -93,7 +93,7 @@ export const news: NewsItem[] = [
     date: "April 17, 2026",
     iso: "2026-04-17",
     title: "OpenReview submissions are open",
-    body: "The submission portal is now live. Suggested submission by April 24 (AOE); hard deadline May 8 (AOE).",
+    body: "The submission portal is now live. Submission deadline May 8 (AOE); notifications by May 15.",
     link: {
       label: "Open OpenReview",
       href: "https://openreview.net/group?id=ICML.cc/2026/Workshop/FMAI#tab-recent-activity",
@@ -102,14 +102,13 @@ export const news: NewsItem[] = [
   {
     date: "March 20, 2026",
     iso: "2026-03-20",
-    title: "Workshop accepted at ICML 2026",
-    body: "Failure Modes in Agentic AI has been accepted as an ICML 2026 workshop in Seoul, Korea.",
+    title: "Workshop accepted at ICML 2026!",
   },
 ];
 
 export const aboutParagraphs = [
-  "Reliability has a rich tradition in machine learning, spanning robustness benchmarks, adversarial evaluation, red-teaming, and the broader safety literature on single-turn language models. Recent advances in foundation-model agents, however, raise a qualitatively new question: when a system reasons, calls tools, writes to memory, and recovers from its own mistakes over long horizons, where does failure actually live? Small errors at each step no longer stay local — they compound through tool calls, memory writes, and recovery decisions, shifting the reliability and safety of the whole system.",
-  "FMAI is a venue for research that takes these compounding failures seriously — defining them, reproducing them, diagnosing them in traces, and verifying that proposed fixes hold. We organize the workshop around four concrete research outputs: operational definitions with clear failure boundaries, reproducible triggers that others can run, comparable diagnostics that look beyond terminal success, and verified fixes with explicit trade-offs.",
+  "Reliability has been studied in ML for a long time, mostly through robustness benchmarks, adversarial evaluation, and red-teaming on chat-style language models. Foundation-model agents push the question somewhere harder. An agent run goes for hundreds of steps, each step depending on tool calls and memory writes from the steps before it. When the run breaks, it rarely breaks at the obvious moment. A bad assumption at step 3 quietly contaminates step 50, and by step 200 the agent has been wrong for a while without noticing. It might have spent its budget on the wrong subtask. It might be reading from memory it polluted itself. Or it landed on an answer at step 12 and spent the rest of the run defending it.",
+  "FMAI is a place to take these failures seriously. The workshop is organized around four kinds of contributions. Definitions matter: what does \"failure\" actually mean here, beyond the loose way the term gets thrown around? Reproducible triggers matter at least as much. We want the smallest setup that breaks the agent the same way every time, so other groups can build on the case. Diagnostics should look at the trace itself, not just the final score, because final-score evaluation hides almost everything interesting. And the fixes worth presenting are the ones that admit what they cost in latency, in capability, or in how well they generalize.",
 ];
 
 export const focusAreas: FocusArea[] = [
@@ -348,7 +347,6 @@ export const schedule: ScheduleItem[] = [
   {
     time: "08:00 - 08:10",
     event: "Opening remarks",
-    detail: "Framing the workshop and the central failure-mode agenda",
   },
   {
     time: "08:10 - 08:50",

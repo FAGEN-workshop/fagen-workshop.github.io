@@ -43,10 +43,6 @@ export default function Home() {
         <section id="speakers" className="scroll-mt-24 bg-[#f5f5f7] py-20">
           <div className="mx-auto max-w-[1154px] px-4">
             <SectionTitle>Tentative Speakers &amp; Panelists</SectionTitle>
-            <p className="mt-6 max-w-[780px] text-[17px] leading-[1.72] text-slate-600">
-              The lineup covers mechanisms, diagnostics, security, evaluation,
-              and practical fixes for agent failures.
-            </p>
             <div className="mx-auto mt-12 flex max-w-[880px] flex-wrap justify-center gap-x-8 gap-y-12">
               {speakers.map((speaker) => (
                 <AvatarCard key={speaker.name} person={speaker} showFocus />
@@ -83,10 +79,6 @@ export default function Home() {
                 <div>
                   <p className="font-mono text-[11px] font-medium uppercase tracking-[0.12em] text-[#4a6b94]">
                     Submit on OpenReview
-                  </p>
-                  <p className="mt-3 text-[15px] leading-[1.7] text-slate-700">
-                    Submissions go through the official OpenReview venue page.
-                    An OpenReview account is required.
                   </p>
                 </div>
                 <a
@@ -170,26 +162,19 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Suggested — quieter, flat, inline */}
+            {/* Notification date — quieter, flat, inline */}
             <div className="mt-14 max-w-[640px] border-t border-[#d8dde5] pt-6">
               <div className="flex flex-wrap items-baseline gap-x-5 gap-y-2">
                 <span className="font-mono text-[11px] font-medium uppercase tracking-[0.12em] text-slate-500">
-                  Suggested submission
+                  Notification date
                 </span>
                 <span className="font-mono text-[18px] font-medium tracking-[-0.01em] text-[#1d1d1f]">
-                  2026-04-24
+                  2026-05-15
                 </span>
                 <span className="font-mono text-[12px] text-slate-500">
-                  AOE · {site.suggestedDeadlineLabel}
+                  AOE · {site.notificationDateLabel}
                 </span>
               </div>
-              <p className="mt-3 text-[14px] leading-[1.65] text-slate-500">
-                Submitting earlier gives reviewers more time and spreads load
-                off the hard deadline.{" "}
-                <span className="font-mono text-[12px] text-slate-400">
-                  · <LocalDeadline isoUtc={site.suggestedDeadlineIso} />
-                </span>
-              </p>
             </div>
           </div>
         </section>
@@ -198,11 +183,6 @@ export default function Home() {
         <section id="schedule" className="scroll-mt-24 bg-[#eceff3] py-20">
           <div className="mx-auto max-w-[1154px] px-4">
             <SectionTitle>Workshop Schedule (Tentative)</SectionTitle>
-            <p className="mt-6 max-w-[780px] text-[17px] leading-[1.72] text-slate-600">
-              Tentative order from the accepted proposal. Keynotes are 30
-              minutes plus 10 minutes Q&amp;A. Workshop date and room follow
-              the official ICML 2026 schedule.
-            </p>
 
             <div className="mt-12 max-w-[900px] divide-y divide-[#d8dde5] border-y border-[#d8dde5]">
               {schedule.map((row) => (
@@ -238,10 +218,6 @@ export default function Home() {
         <section id="organizers" className="scroll-mt-24 bg-[#f5f5f7] py-20">
           <div className="mx-auto max-w-[1154px] px-4">
             <SectionTitle>Organizing Committee</SectionTitle>
-            <p className="mt-6 max-w-[780px] text-[17px] leading-[1.72] text-slate-600">
-              The organizers work on training, evaluation, safety, grounding,
-              security, and workshop execution.
-            </p>
             <div className="mt-12 flex flex-wrap justify-center gap-x-8 gap-y-12">
               {organizers.map((organizer) => (
                 <AvatarCard key={organizer.name} person={organizer} />
