@@ -1,26 +1,22 @@
 import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
+import { NewsSection } from "@/components/NewsSection";
+import { SectionTitle } from "@/components/SectionTitle";
 import { Footer } from "@/components/Footer";
 import { LocalDeadline } from "@/components/LocalDeadline";
 import { AvatarCard } from "@/components/AvatarCard";
 import { withBasePath } from "@/lib/site-path";
 import {
+  aboutParagraphs,
   cfpBullets,
   focusAreas,
   organizers,
-  overviewParagraphs,
   schedule,
   site,
   speakers,
   sponsors,
   topicsOfInterest,
 } from "@/lib/workshop-data";
-
-const sectionHeadingClass =
-  "mt-4 text-left text-[clamp(28px,3.8vw,44px)] font-medium leading-[1.15] tracking-[-0.035em] text-[#1d1d1f]";
-
-const eyebrowClass =
-  "font-mono text-[11px] font-medium uppercase tracking-[0.14em] text-[#6b8fbf]";
 
 export default function Home() {
   return (
@@ -29,14 +25,31 @@ export default function Home() {
       <main className="pt-16">
         <HeroSection />
 
-        {/* Overview */}
-        <section id="overview" className="scroll-mt-24 bg-[#f5f5f7] py-20">
+        <NewsSection />
+
+        {/* About */}
+        <section id="about" className="scroll-mt-24 bg-[#eceff3] py-20">
           <div className="mx-auto max-w-[1154px] px-4">
-            <p className={eyebrowClass}>Overview</p>
-            <h2 className={sectionHeadingClass}>Why This Workshop</h2>
+            <SectionTitle>About the Workshop</SectionTitle>
             <div className="mt-8 max-w-[820px] space-y-5 text-[17px] leading-[1.72] text-slate-600">
-              {overviewParagraphs.map((paragraph) => (
+              {aboutParagraphs.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Speakers */}
+        <section id="speakers" className="scroll-mt-24 bg-[#f5f5f7] py-20">
+          <div className="mx-auto max-w-[1154px] px-4">
+            <SectionTitle>Tentative Speakers &amp; Panelists</SectionTitle>
+            <p className="mt-6 max-w-[780px] text-[17px] leading-[1.72] text-slate-600">
+              The lineup covers mechanisms, diagnostics, security, evaluation,
+              and practical fixes for agent failures.
+            </p>
+            <div className="mx-auto mt-12 flex max-w-[880px] flex-wrap justify-center gap-x-8 gap-y-12">
+              {speakers.map((speaker) => (
+                <AvatarCard key={speaker.name} person={speaker} showFocus />
               ))}
             </div>
           </div>
@@ -45,8 +58,7 @@ export default function Home() {
         {/* Call for Papers */}
         <section id="cfp" className="scroll-mt-24 bg-[#eceff3] py-20">
           <div className="mx-auto max-w-[1154px] px-4">
-            <p className={eyebrowClass}>Call for Papers</p>
-            <h2 className={sectionHeadingClass}>Submit to FMAI</h2>
+            <SectionTitle>Call for Papers</SectionTitle>
 
             <div className="mt-12 grid gap-12 lg:grid-cols-[1.15fr_0.85fr]">
               {/* Format — flat editorial block */}
@@ -135,8 +147,7 @@ export default function Home() {
         {/* Important Dates */}
         <section id="dates" className="scroll-mt-24 bg-[#f5f5f7] py-20">
           <div className="mx-auto max-w-[1154px] px-4">
-            <p className={eyebrowClass}>Important Dates</p>
-            <h2 className={sectionHeadingClass}>Deadlines</h2>
+            <SectionTitle>Key Dates</SectionTitle>
 
             {/* Hard deadline — the memorable moment */}
             <div className="mt-12 max-w-[920px]">
@@ -183,30 +194,10 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Speakers */}
-        <section id="speakers" className="scroll-mt-24 bg-[#eceff3] py-20">
-          <div className="mx-auto max-w-[1154px] px-4">
-            <p className={eyebrowClass}>Program</p>
-            <h2 className="mt-4 text-left text-[clamp(24px,3vw,34px)] font-medium leading-[1.15] tracking-[-0.03em] text-[#1d1d1f]">
-              Tentative Speakers &amp; Panelists
-            </h2>
-            <p className="mt-6 max-w-[780px] text-[17px] leading-[1.72] text-slate-600">
-              The lineup covers mechanisms, diagnostics, security, evaluation,
-              and practical fixes for agent failures.
-            </p>
-            <div className="mx-auto mt-12 flex max-w-[880px] flex-wrap justify-center gap-x-8 gap-y-12">
-              {speakers.map((speaker) => (
-                <AvatarCard key={speaker.name} person={speaker} showFocus />
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Schedule */}
-        <section id="schedule" className="scroll-mt-24 bg-[#f5f5f7] py-20">
+        <section id="schedule" className="scroll-mt-24 bg-[#eceff3] py-20">
           <div className="mx-auto max-w-[1154px] px-4">
-            <p className={eyebrowClass}>Program</p>
-            <h2 className={sectionHeadingClass}>Tentative Schedule</h2>
+            <SectionTitle>Workshop Schedule (Tentative)</SectionTitle>
             <p className="mt-6 max-w-[780px] text-[17px] leading-[1.72] text-slate-600">
               Tentative order from the accepted proposal. Keynotes are 30
               minutes plus 10 minutes Q&amp;A. Workshop date and room follow
@@ -244,10 +235,9 @@ export default function Home() {
         </section>
 
         {/* Organizers */}
-        <section id="organizers" className="scroll-mt-24 bg-[#eceff3] py-20">
+        <section id="organizers" className="scroll-mt-24 bg-[#f5f5f7] py-20">
           <div className="mx-auto max-w-[1154px] px-4">
-            <p className={eyebrowClass}>Team</p>
-            <h2 className={sectionHeadingClass}>Organizers</h2>
+            <SectionTitle>Organizing Committee</SectionTitle>
             <p className="mt-6 max-w-[780px] text-[17px] leading-[1.72] text-slate-600">
               The organizers work on training, evaluation, safety, grounding,
               security, and workshop execution.
@@ -261,10 +251,9 @@ export default function Home() {
         </section>
 
         {/* Sponsors */}
-        <section id="sponsors" className="scroll-mt-24 bg-[#f5f5f7] py-20">
+        <section id="sponsors" className="scroll-mt-24 bg-[#eceff3] py-20">
           <div className="mx-auto max-w-[1154px] px-4">
-            <p className={eyebrowClass}>Sponsors</p>
-            <h2 className={sectionHeadingClass}>Sponsors</h2>
+            <SectionTitle>Sponsors</SectionTitle>
             <p className="mt-6 max-w-[780px] text-[17px] leading-[1.72] text-slate-600">
               We sincerely thank the support from our sponsors:
             </p>
@@ -309,12 +298,7 @@ export default function Home() {
           }}
         >
           <div className="mx-auto max-w-[1154px] px-4">
-            <p className="font-mono text-[11px] font-medium uppercase tracking-[0.14em] text-[#8aa8cc]">
-              Contact
-            </p>
-            <h2 className="mt-4 text-left text-[clamp(28px,3.8vw,44px)] font-medium leading-[1.15] tracking-[-0.035em] text-slate-50">
-              Get in touch
-            </h2>
+            <SectionTitle tone="dark">Contact</SectionTitle>
             <p className="mt-6 max-w-[680px] text-[17px] leading-[1.72] text-slate-400">
               Reach out for submissions, sponsorship, speaker logistics, or
               collaboration.

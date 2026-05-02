@@ -33,11 +33,11 @@ export function HeroSection() {
         </div>
 
         <h1
-          className="mt-6 max-w-[900px] text-left font-medium text-[#f5f5f7]"
+          className="font-display mt-6 max-w-[900px] text-left font-semibold text-[#f5f5f7]"
           style={{
             fontSize: "clamp(40px, 5.8vw, 72px)",
-            lineHeight: "1.05",
-            letterSpacing: "-0.04em",
+            lineHeight: "1.04",
+            letterSpacing: "-0.028em",
           }}
         >
           {titleWords.map((word, i) => (
@@ -56,22 +56,15 @@ export function HeroSection() {
         </h1>
 
         <p
-          className="hero-in font-mono mt-5 max-w-[760px] text-[13px] font-medium uppercase tracking-[0.14em] text-[#bfd1e4]"
+          className="hero-in font-mono mt-6 max-w-[760px] text-[14px] font-medium uppercase tracking-[0.16em] text-[#bfd1e4]"
           style={{ animationDelay: `${lastWordEndMs + 100}ms` }}
         >
           {site.tagline}
         </p>
 
-        <p
-          className="hero-in mt-6 max-w-[680px] text-[17px] leading-[1.72] text-[#a1a1a6]"
-          style={{ animationDelay: `${lastWordEndMs + 220}ms` }}
-        >
-          {site.heroBlurb}
-        </p>
-
         <div
-          className="hero-in mt-8 flex flex-col gap-3 sm:flex-row"
-          style={{ animationDelay: `${lastWordEndMs + 340}ms` }}
+          className="hero-in mt-10 flex flex-col gap-3 sm:flex-row"
+          style={{ animationDelay: `${lastWordEndMs + 220}ms` }}
         >
           <Link
             href="#cfp"

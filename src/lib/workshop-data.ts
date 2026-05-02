@@ -31,6 +31,16 @@ export interface ScheduleItem {
   note?: string;
 }
 
+export interface NewsItem {
+  /** Display date (e.g. "April 19, 2026"). */
+  date: string;
+  /** ISO date for sorting and machine readability (YYYY-MM-DD). */
+  iso: string;
+  title: string;
+  body: string;
+  link?: { label: string; href: string };
+}
+
 export interface Sponsor {
   name: string;
   url: string;
@@ -48,8 +58,6 @@ export const site = {
   domain: "fmai-workshop.github.io",
   description:
     "ICML 2026 workshop on actionable failure modes in agentic AI: reproducible triggers, trace diagnostics, and verified fixes.",
-  heroBlurb:
-    "Foundation-model agents fail in ways that compound across tool calls, memory, and recovery. FMAI is a venue for research that defines these failures, reproduces them, diagnoses traces, and verifies fixes.",
   openReviewUrl:
     "https://openreview.net/group?id=ICML.cc/2026/Workshop/FMAI#tab-recent-activity",
   submissionDeadlineLabel: "May 8, 2026 (AOE)",
@@ -62,18 +70,46 @@ export const site = {
 };
 
 export const navigation: NavItem[] = [
+  { label: "News", href: "/#news", anchor: "news" },
+  { label: "About", href: "/#about", anchor: "about" },
+  { label: "Speakers", href: "/#speakers", anchor: "speakers" },
   { label: "Call for Papers", href: "/#cfp", anchor: "cfp" },
   { label: "Dates", href: "/#dates", anchor: "dates" },
-  { label: "Speakers", href: "/#speakers", anchor: "speakers" },
   { label: "Schedule", href: "/#schedule", anchor: "schedule" },
   { label: "Organizers", href: "/#organizers", anchor: "organizers" },
   { label: "Sponsors", href: "/#sponsors", anchor: "sponsors" },
   { label: "Contact", href: "/#contact", anchor: "contact" },
 ];
 
-export const overviewParagraphs = [
-  "Agent quality depends on long-horizon interaction. Small mistakes at each step compound through tool calls, memory writes, and recovery decisions, shifting the reliability and safety of the whole system.",
-  "FMAI focuses on four research outputs: operational definitions, reproducible triggers, comparable diagnostics, and verified fixes.",
+export const news: NewsItem[] = [
+  {
+    date: "April 19, 2026",
+    iso: "2026-04-19",
+    title: "Workshop X account is live",
+    body: "Follow @FmaiWorkshop for deadline reminders, accepted-paper highlights, and program updates.",
+    link: { label: "Follow @FmaiWorkshop", href: "https://x.com/FmaiWorkshop" },
+  },
+  {
+    date: "April 17, 2026",
+    iso: "2026-04-17",
+    title: "OpenReview submissions are open",
+    body: "The submission portal is now live. Suggested submission by April 24 (AOE); hard deadline May 8 (AOE).",
+    link: {
+      label: "Open OpenReview",
+      href: "https://openreview.net/group?id=ICML.cc/2026/Workshop/FMAI#tab-recent-activity",
+    },
+  },
+  {
+    date: "March 20, 2026",
+    iso: "2026-03-20",
+    title: "Workshop accepted at ICML 2026",
+    body: "Failure Modes in Agentic AI has been accepted as an ICML 2026 workshop in Seoul, Korea.",
+  },
+];
+
+export const aboutParagraphs = [
+  "Reliability has a rich tradition in machine learning, spanning robustness benchmarks, adversarial evaluation, red-teaming, and the broader safety literature on single-turn language models. Recent advances in foundation-model agents, however, raise a qualitatively new question: when a system reasons, calls tools, writes to memory, and recovers from its own mistakes over long horizons, where does failure actually live? Small errors at each step no longer stay local — they compound through tool calls, memory writes, and recovery decisions, shifting the reliability and safety of the whole system.",
+  "FMAI is a venue for research that takes these compounding failures seriously — defining them, reproducing them, diagnosing them in traces, and verifying that proposed fixes hold. We organize the workshop around four concrete research outputs: operational definitions with clear failure boundaries, reproducible triggers that others can run, comparable diagnostics that look beyond terminal success, and verified fixes with explicit trade-offs.",
 ];
 
 export const focusAreas: FocusArea[] = [

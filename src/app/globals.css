@@ -1,8 +1,10 @@
 @import "tailwindcss";
 
 @theme inline {
-  --font-sans: var(--font-jakarta), "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-sans: var(--font-inter), "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-display: var(--font-inter-tight), var(--font-inter), "Segoe UI", system-ui, -apple-system, sans-serif;
   --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+  --font-serif: var(--font-fraunces), Georgia, "Times New Roman", serif;
 }
 
 @layer base {
