@@ -250,7 +250,7 @@ export const speakers: Person[] = [
   },
   {
     name: "Yu Su",
-    affiliation: "The Ohio State University and industry",
+    affiliation: "NeoCognition / OSU",
     bio: "Yu Su is an Associate Professor at The Ohio State University whose work studies grounded language understanding, web agents, interactive systems, and evaluation in realistic environments.",
     focus: "Web-agent failures and online evaluation gaps",
     profileUrl: "https://ysu1989.github.io/",
@@ -265,6 +265,16 @@ export const speakers: Person[] = [
     profileUrl: "https://hai.stanford.edu/people/rishi-bommasani",
     imageUrl: "/people/rishi-bommasani.png",
     assets: ["Foundation Models", "HELM"],
+    postProposal: true,
+  },
+  {
+    name: "Andrea Zanette",
+    affiliation: "Carnegie Mellon University",
+    bio: "Andrea Zanette is an Assistant Professor at Carnegie Mellon University in the ECE department, with a courtesy appointment in the Machine Learning Department. His research spans reinforcement learning theory, LLM reasoning and alignment, and how RL with text feedback shapes the capabilities and failure modes of language-model agents.",
+    focus: "RL training and feedback failures in language-model agents",
+    profileUrl: "https://azanette.com/",
+    imageUrl: "/people/andrea-zanette.png",
+    assets: ["Maximum Likelihood RL", "RL with Text Feedback"],
     postProposal: true,
   },
 ];
