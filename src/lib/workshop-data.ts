@@ -51,11 +51,11 @@ export interface Sponsor {
 }
 
 export const site = {
-  shortTitle: "FMAI",
+  shortTitle: "FAGEN",
   title: "Failure Modes in Agentic AI",
   tagline: "Reproducible Triggers, Trace Diagnostics, and Verified Fixes",
   conferenceLabel: "ICML 2026 Workshop",
-  domain: "fmai-workshop.github.io",
+  domain: "fagen-workshop.github.io",
   description:
     "ICML 2026 workshop on actionable failure modes in agentic AI: reproducible triggers, trace diagnostics, and verified fixes.",
   openReviewUrl:
@@ -64,9 +64,9 @@ export const site = {
   submissionDeadlineIso: "2026-05-09T11:59:00Z",
   notificationDateLabel: "May 15, 2026 (AOE)",
   notificationDateIso: "2026-05-16T11:59:00Z",
-  contactEmail: "fmaiworkshop@gmail.com",
-  xUrl: "https://x.com/FmaiWorkshop",
-  xHandle: "@FmaiWorkshop",
+  contactEmail: "fagenworkshop@gmail.com",
+  xUrl: "https://x.com/FAGENWorkshop",
+  xHandle: "@FAGENWorkshop",
 };
 
 export const navigation: NavItem[] = [
@@ -86,8 +86,8 @@ export const news: NewsItem[] = [
     date: "April 19, 2026",
     iso: "2026-04-19",
     title: "Workshop X account is live",
-    body: "Follow @FmaiWorkshop for deadline reminders, accepted-paper highlights, and program updates.",
-    link: { label: "Follow @FmaiWorkshop", href: "https://x.com/FmaiWorkshop" },
+    body: "Follow @FAGENWorkshop for deadline reminders, accepted-paper highlights, and program updates.",
+    link: { label: "Follow @FAGENWorkshop", href: "https://x.com/FAGENWorkshop" },
   },
   {
     date: "April 17, 2026",
@@ -108,7 +108,7 @@ export const news: NewsItem[] = [
 
 export const aboutParagraphs = [
   "Reliability has been studied in ML for a long time, mostly through robustness benchmarks, adversarial evaluation, and red-teaming on chat-style language models. Foundation-model agents push the question somewhere harder. An agent run goes for hundreds of steps, each step depending on tool calls and memory writes from the steps before it. When the run breaks, it rarely breaks at the obvious moment. A bad assumption at step 3 quietly contaminates step 50, and by step 200 the agent has been wrong for a while without noticing. It might have spent its budget on the wrong subtask. It might be reading from memory it polluted itself. Or it landed on an answer at step 12 and spent the rest of the run defending it.",
-  "FMAI is a place to take these failures seriously. The workshop is organized around four kinds of contributions. Definitions matter: what does \"failure\" actually mean here, beyond the loose way the term gets thrown around? Reproducible triggers matter at least as much. We want the smallest setup that breaks the agent the same way every time, so other groups can build on the case. Diagnostics should look at the trace itself, not just the final score, because final-score evaluation hides almost everything interesting. And the fixes worth presenting are the ones that admit what they cost in latency, in capability, or in how well they generalize.",
+  "FAGEN is a place to take these failures seriously. The workshop is organized around four kinds of contributions. Definitions matter: what does \"failure\" actually mean here, beyond the loose way the term gets thrown around? Reproducible triggers matter at least as much. We want the smallest setup that breaks the agent the same way every time, so other groups can build on the case. Diagnostics should look at the trace itself, not just the final score, because final-score evaluation hides almost everything interesting. And the fixes worth presenting are the ones that admit what they cost in latency, in capability, or in how well they generalize.",
 ];
 
 export const focusAreas: FocusArea[] = [

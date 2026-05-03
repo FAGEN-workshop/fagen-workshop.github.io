@@ -1,7 +1,7 @@
 import { RedirectTo } from "@/components/RedirectTo";
 
 export const metadata = {
-  title: "FMAI | Speakers",
+  title: "FAGEN | Speakers",
 };
 
 export default function SpeakersPage() {

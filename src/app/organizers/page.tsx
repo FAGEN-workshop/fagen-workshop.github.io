@@ -1,7 +1,7 @@
 import { RedirectTo } from "@/components/RedirectTo";
 
 export const metadata = {
-  title: "FMAI | Organizers",
+  title: "FAGEN | Organizers",
 };
 
 export default function OrganizersPage() {

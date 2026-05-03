@@ -1,7 +1,7 @@
 import { RedirectTo } from "@/components/RedirectTo";
 
 export const metadata = {
-  title: "FMAI",
+  title: "FAGEN",
 };
 
 export default function ReviewerGuidelinesPage() {

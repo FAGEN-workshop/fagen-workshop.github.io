@@ -2,7 +2,7 @@
   "name": "fmai-workshop-site",
   "version": "0.1.0",
   "private": true,
-  "description": "Official website for the Failure Modes in Agentic AI (FMAI) workshop at ICML 2026.",
+  "description": "Official website for the Failure Modes in Agentic AI (FAGEN) workshop at ICML 2026.",
   "license": "MIT",
   "scripts": {
     "dev": "next dev",

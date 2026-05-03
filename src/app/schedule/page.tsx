@@ -1,7 +1,7 @@
 import { RedirectTo } from "@/components/RedirectTo";
 
 export const metadata = {
-  title: "FMAI | Schedule",
+  title: "FAGEN | Schedule",
 };
 
 export default function SchedulePage() {

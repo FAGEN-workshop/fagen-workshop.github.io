@@ -37,7 +37,7 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: "Failure Modes in Agentic AI (FMAI) | ICML 2026 Workshop",
+  title: "Failure Modes in Agentic AI (FAGEN) | ICML 2026 Workshop",
   description:
     "ICML 2026 workshop on failure modes in agentic AI, centered on reproducible triggers, trace diagnostics, and verified fixes.",
 };

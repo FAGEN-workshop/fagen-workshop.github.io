@@ -1,7 +1,7 @@
 import { RedirectTo } from "@/components/RedirectTo";
 
 export const metadata = {
-  title: "FMAI | Call for Papers",
+  title: "FAGEN | Call for Papers",
 };
 
 export default function SubmitPage() {

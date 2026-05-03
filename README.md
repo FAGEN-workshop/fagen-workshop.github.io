@@ -1,6 +1,6 @@
-# FMAI Workshop Website
+# FAGEN Workshop Website
 
-Website for **Failure Modes in Agentic AI (FMAI)**, an ICML 2026 workshop focused on reproducible triggers, trace diagnostics, and verified fixes for agentic systems.
+Website for **Failure Modes in Agentic AI (FAGEN)**, an ICML 2026 workshop focused on reproducible triggers, trace diagnostics, and verified fixes for agentic systems.
 
 ## Local Development
 
@@ -20,7 +20,7 @@ This project is configured for GitHub Pages static deployment.
 3. Set the source to `GitHub Actions`.
 4. Push to `main` or `master` and the workflow will publish the `out/` build automatically.
 
-If the repository is named `fmai-workshop.github.io`, the site will publish at the root domain. If the repository uses another name, the workflow passes the GitHub Pages base path into the build so internal routes and local speaker images still resolve correctly.
+If the repository is named `fagen-workshop.github.io`, the site will publish at the root domain. If the repository uses another name, the workflow passes the GitHub Pages base path into the build so internal routes and local speaker images still resolve correctly.
 
 ## Available Scripts
 

@@ -66,7 +66,7 @@ export function Navbar() {
         <Link
           href="/"
           className="flex items-center gap-3 no-underline"
-          aria-label="FMAI Workshop home"
+          aria-label="FAGEN Workshop home"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -74,7 +74,7 @@ export function Navbar() {
             alt=""
             className="h-9 w-9 shrink-0 rounded-full"
           />
-          <span className="text-[15px] font-semibold text-slate-100">FMAI</span>
+          <span className="text-[15px] font-semibold text-slate-100">FAGEN</span>
           <span className="hidden text-slate-700 sm:inline">/</span>
           <span className="hidden text-[11px] font-semibold uppercase tracking-[0.18em] text-[#a3bdd8] sm:inline">
             ICML 2026
