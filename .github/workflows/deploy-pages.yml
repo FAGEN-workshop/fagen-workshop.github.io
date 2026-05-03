@@ -1,4 +1,4 @@
-name: Deploy FMAI website to GitHub Pages
+name: Deploy FAGEN website to GitHub Pages
 
 on:
   push:
