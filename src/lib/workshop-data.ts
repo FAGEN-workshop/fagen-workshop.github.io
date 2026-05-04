@@ -177,15 +177,6 @@ export const speakers: Person[] = [
     postProposal: true,
   },
   {
-    name: "James Zou",
-    affiliation: "Stanford University and CZ Biohub",
-    bio: "James Zou is an Associate Professor of Biomedical Data Science, Computer Science, and Electrical Engineering at Stanford. His work focuses on making AI more reliable, human-compatible, and statistically rigorous, with major applications in health and biomedicine.",
-    focus: "Tool use failures and automated red-teaming",
-    profileUrl: "https://med.stanford.edu/profiles/james-zou",
-    imageUrl: "/people/james-zou.jpg",
-    assets: ["AvaTaR", "AutoRedTeamer"],
-  },
-  {
     name: "Bo Li",
     affiliation: "University of Illinois Urbana-Champaign and Virtue AI",
     bio: "Bo Li is the Wexler AI Scholar and an Associate Professor at UIUC, where she works on trustworthy machine learning, AI safety, security, privacy, and robustness. She is also the founder and CEO of Virtue AI.",
@@ -238,15 +229,6 @@ export const speakers: Person[] = [
     profileUrl: "https://maartensap.com/aboutme.html",
     imageUrl: "/people/maarten-sap.webp",
     assets: ["SOTOPIA", "SOTOPIA-pi"],
-  },
-  {
-    name: "Yi Dong",
-    affiliation: "NVIDIA Research",
-    bio: "Yi Dong is a principal research scientist at NVIDIA working on reasoning models and virtual agents. His research spans model reliability, prolonged reinforcement learning, and practical agent deployment for enterprise settings.",
-    focus: "Tool and runtime reliability, plus system regressions",
-    profileUrl: "https://research.nvidia.com/person/yi-dong",
-    imageUrl: "/people/yi-dong.jpg",
-    assets: ["ProRL", "ProRLv2"],
   },
   {
     name: "Yu Su",

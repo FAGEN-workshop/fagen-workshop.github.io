@@ -43,7 +43,7 @@ export default function Home() {
         <section id="speakers" className="scroll-mt-24 bg-[#f5f5f7] py-20">
           <div className="mx-auto max-w-[1154px] px-4">
             <SectionTitle>Tentative Speakers &amp; Panelists</SectionTitle>
-            <div className="mx-auto mt-12 flex max-w-[880px] flex-wrap justify-center gap-x-8 gap-y-12">
+            <div className="mx-auto mt-12 grid max-w-[1040px] grid-cols-2 justify-items-center gap-x-8 gap-y-12 sm:grid-cols-3 lg:grid-cols-5">
               {speakers.map((speaker) => (
                 <AvatarCard key={speaker.name} person={speaker} showFocus />
               ))}
