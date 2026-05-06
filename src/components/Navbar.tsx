@@ -70,7 +70,7 @@ export function Navbar() {
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={withBasePath("/branding/fmai-pin.png")}
+            src={withBasePath("/branding/fagen-pin.png")}
             alt=""
             className="h-9 w-9 shrink-0 rounded-full"
           />
