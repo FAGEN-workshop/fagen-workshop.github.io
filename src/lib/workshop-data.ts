@@ -60,10 +60,10 @@ export const site = {
     "ICML 2026 workshop on actionable failure modes in agentic AI: reproducible triggers, trace diagnostics, and verified fixes.",
   openReviewUrl:
     "https://openreview.net/group?id=ICML.cc/2026/Workshop/FAGEN#tab-recent-activity",
-  submissionDeadlineLabel: "May 8, 2026 (AOE)",
-  submissionDeadlineIso: "2026-05-09T11:59:00Z",
-  notificationDateLabel: "May 15, 2026 (AOE)",
-  notificationDateIso: "2026-05-16T11:59:00Z",
+  submissionDeadlineLabel: "May 11, 2026 (AOE)",
+  submissionDeadlineIso: "2026-05-12T11:59:00Z",
+  notificationDateLabel: "May 22, 2026 (AOE)",
+  notificationDateIso: "2026-05-23T11:59:00Z",
   contactEmail: "fagenworkshop@gmail.com",
   xUrl: "https://x.com/FAGENWorkshop",
   xHandle: "@FAGENWorkshop",
@@ -93,7 +93,7 @@ export const news: NewsItem[] = [
     date: "April 17, 2026",
     iso: "2026-04-17",
     title: "OpenReview submissions are open",
-    body: "The submission portal is now live. Submission deadline May 8 (AOE); notifications by May 15.",
+    body: "The submission portal is now live. Submission deadline May 11 (AOE); notifications by May 22.",
     link: {
       label: "Open OpenReview",
       href: "https://openreview.net/group?id=ICML.cc/2026/Workshop/FAGEN#tab-recent-activity",

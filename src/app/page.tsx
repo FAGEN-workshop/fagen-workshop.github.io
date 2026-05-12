@@ -150,7 +150,7 @@ export default function Home() {
                 className="font-mono mt-4 font-medium leading-[1] tracking-[-0.025em] text-[#1d1d1f]"
                 style={{ fontSize: "clamp(34px, 4.6vw, 56px)" }}
               >
-                2026-05-08
+                2026-05-11
               </p>
               <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-2">
                 <p className="font-mono text-[13px] font-medium tracking-[0.02em] text-[#4a6b94]">
@@ -169,7 +169,7 @@ export default function Home() {
                   Notification date
                 </span>
                 <span className="font-mono text-[18px] font-medium tracking-[-0.01em] text-[#1d1d1f]">
-                  2026-05-15
+                  2026-05-22
                 </span>
                 <span className="font-mono text-[12px] text-slate-500">
                   AOE · {site.notificationDateLabel}
