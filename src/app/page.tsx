@@ -249,7 +249,10 @@ export default function Home() {
             <SectionTitle>Organizing Committee</SectionTitle>
             <div className="mt-12 flex flex-wrap justify-center gap-x-8 gap-y-12">
               {organizers.map((organizer) => (
-                <AvatarCard key={organizer.name} person={organizer} />
+                <AvatarCard
+                  key={`${organizer.name}-${organizer.imageUrl ?? organizer.profileUrl ?? organizer.affiliation}`}
+                  person={organizer}
+                />
               ))}
             </div>
           </div>

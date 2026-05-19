@@ -302,6 +302,13 @@ export const organizers: Person[] = [
     imageUrl: "/people/andrew-zhou.png",
   },
   {
+    name: "Zihan Wang",
+    affiliation: "Abaka AI",
+    bio: "",
+    profileUrl: "https://www.abaka.ai/",
+    imageUrl: "/people/2zihanwang.png",
+  },
+  {
     name: "Niloofar Mireshghallah",
     affiliation: "humans& and Carnegie Mellon University",
     role: "Panel",
