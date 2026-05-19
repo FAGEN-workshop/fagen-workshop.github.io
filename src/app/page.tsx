@@ -247,7 +247,7 @@ export default function Home() {
         <section id="organizers" className="scroll-mt-24 bg-[#f5f5f7] py-20">
           <div className="mx-auto max-w-[1154px] px-4">
             <SectionTitle>Organizing Committee</SectionTitle>
-            <div className="mt-12 flex flex-wrap justify-center gap-x-8 gap-y-12">
+            <div className="mt-12 flex flex-wrap justify-center gap-x-3 gap-y-12">
               {organizers.map((organizer) => (
                 <AvatarCard
                   key={`${organizer.name}-${organizer.imageUrl ?? organizer.profileUrl ?? organizer.affiliation}`}
