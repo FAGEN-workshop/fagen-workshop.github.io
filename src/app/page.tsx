@@ -24,22 +24,29 @@ function RescheduledDate({
   newDay,
 }: {
   prefix: string;
-  oldDay: string;
+  oldDay: string | string[];
   newDay: string;
 }) {
+  const oldDays = Array.isArray(oldDay) ? oldDay : [oldDay];
+
   return (
     <span
       role="text"
-      aria-label={`${prefix}${oldDay} updated to ${prefix}${newDay}`}
+      aria-label={`${oldDays
+        .map((day) => `${prefix}${day}`)
+        .join(", ")} updated to ${prefix}${newDay}`}
       className="inline-flex flex-wrap items-baseline gap-x-2"
     >
       <span aria-hidden="true">{prefix}</span>
-      <del
-        aria-hidden="true"
-        className="text-slate-400 decoration-red-500 decoration-[3px]"
-      >
-        {oldDay}
-      </del>
+      {oldDays.map((day) => (
+        <del
+          key={day}
+          aria-hidden="true"
+          className="text-slate-400 decoration-red-500 decoration-[3px]"
+        >
+          {day}
+        </del>
+      ))}
       <ins aria-hidden="true" className="no-underline">
         {newDay}
       </ins>
@@ -198,7 +205,11 @@ export default function Home() {
                   Notification date
                 </span>
                 <span className="font-mono text-[18px] font-medium tracking-[-0.01em] text-[#1d1d1f]">
-                  <RescheduledDate prefix="2026-05-" oldDay="15" newDay="22" />
+                  <RescheduledDate
+                    prefix="2026-05-"
+                    oldDay={["15", "22"]}
+                    newDay="25"
+                  />
                 </span>
                 <span className="font-mono text-[12px] text-slate-500">
                   AOE · {site.notificationDateLabel}
