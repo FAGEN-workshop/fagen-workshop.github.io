@@ -207,7 +207,7 @@ export default function Home() {
                 <span className="font-mono text-[18px] font-medium tracking-[-0.01em] text-[#1d1d1f]">
                   <RescheduledDate
                     prefix="2026-05-"
-                    oldDay={["15", "22"]}
+                    oldDay="15"
                     newDay="25"
                   />
                 </span>
