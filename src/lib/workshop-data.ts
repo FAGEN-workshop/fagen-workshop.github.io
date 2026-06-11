@@ -163,6 +163,12 @@ export const sponsors: Sponsor[] = [
     logo: "/sponsors/eightsleep.svg",
     maxHeightClass: "h-11",
   },
+  {
+    name: "TFAM Foundation",
+    url: "https://www.tfamcapital.com/",
+    logo: "/sponsors/tfam.png",
+    maxHeightClass: "h-[88px]",
+  },
 ];
 
 export const speakers: Person[] = [
