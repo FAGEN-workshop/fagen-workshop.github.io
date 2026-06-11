@@ -350,63 +350,88 @@ export const organizers: Person[] = [
 
 export const schedule: ScheduleItem[] = [
   {
-    time: "08:00 - 08:10",
+    time: "08:00 – 08:10",
     event: "Opening remarks",
   },
   {
-    time: "08:10 - 08:50",
-    event: "Keynote 1",
+    time: "08:10 – 08:40",
+    event: "Invited talk 1",
     detail: "TBD",
   },
   {
-    time: "08:50 - 09:30",
-    event: "Keynote 2",
+    time: "08:40 – 09:10",
+    event: "Invited talk 2",
     detail: "TBD",
   },
   {
-    time: "09:30 - 10:10",
+    time: "09:10 – 09:40",
+    event: "Invited talk 3",
+    detail: "TBD",
+  },
+  {
+    time: "09:40 – 10:10",
+    event: "Invited talk 4",
+    detail: "TBD",
+  },
+  {
+    time: "10:10 – 10:40",
+    event: "Coffee break",
+  },
+  {
+    time: "10:40 – 11:10",
+    event: "Invited talk 5",
+    detail: "TBD",
+  },
+  {
+    time: "11:10 – 11:40",
+    event: "Invited talk 6",
+    detail: "TBD",
+  },
+  {
+    time: "11:40 – 11:55",
+    event: "Agent Last Exam",
+    detail: "15-minute invited talk",
+  },
+  {
+    time: "12:00 – 14:00",
+    event: "Lunch and posters",
+  },
+  {
+    time: "14:00 – 14:30",
     event: "Contributed spotlights",
     detail: "Five to eight short talks from accepted contributions",
   },
   {
-    time: "10:10 - 10:40",
+    time: "14:30 – 15:00",
+    event: "Invited talk 7",
+    detail: "TBD",
+  },
+  {
+    time: "15:00 – 15:30",
+    event: "Invited talk 8",
+    detail: "TBD",
+  },
+  {
+    time: "15:30 – 15:40",
+    event: "Sponsor talk",
+    detail: "10-minute industry talk",
+  },
+  {
+    time: "15:40 – 16:00",
     event: "Coffee break",
   },
   {
-    time: "10:40 - 11:20",
-    event: "Keynote 3",
+    time: "16:00 – 16:30",
+    event: "Invited talk 9",
     detail: "TBD",
   },
   {
-    time: "11:20 - 12:00",
-    event: "Keynote 4",
-    detail: "TBD",
-  },
-  {
-    time: "12:00 - 14:00",
-    event: "Lunch and posters",
-  },
-  {
-    time: "14:00 - 14:40",
-    event: "Keynote 5",
-    detail: "TBD",
-  },
-  {
-    time: "14:40 - 15:20",
-    event: "Keynote 6",
-    detail: "TBD",
-  },
-  {
-    time: "15:20 - 15:50",
-    event: "Coffee break",
-  },
-  {
-    time: "15:50 - 16:50",
+    time: "16:30 – 17:30",
     event: "Panel discussion",
     detail: "Panelists TBD",
   },
   {
-    time: "16:50 - 17:00",
+    time: "17:30 – 17:40",
     event: "Closing remarks and awards",
   },
 ];
