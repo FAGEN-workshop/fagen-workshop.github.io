@@ -167,7 +167,7 @@ export const sponsors: Sponsor[] = [
     name: "TFAM Foundation",
     url: "https://www.tfamcapital.com/",
     logo: "/sponsors/tfam.png",
-    maxHeightClass: "h-11",
+    maxHeightClass: "h-[88px]",
   },
 ];
 
