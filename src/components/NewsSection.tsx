@@ -2,7 +2,7 @@ import { SectionTitle } from "@/components/SectionTitle";
 import { news } from "@/lib/workshop-data";
 
 export function NewsSection() {
-  const items = [...news].sort((a, b) => (a.iso < b.iso ? 1 : -1)).slice(0, 3);
+  const items = [...news].sort((a, b) => (a.iso < b.iso ? 1 : -1)).slice(0, 4);
 
   return (
     <section id="news" className="scroll-mt-24 bg-[#f5f5f7] py-20">

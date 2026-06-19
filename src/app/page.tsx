@@ -177,43 +177,69 @@ export default function Home() {
           <div className="mx-auto max-w-[1154px] px-4">
             <SectionTitle>Key Dates</SectionTitle>
 
-            {/* Hard deadline — the memorable moment */}
-            <div className="mt-12 max-w-[920px]">
-              <p className="font-mono text-[11px] font-medium uppercase tracking-[0.14em] text-[#4a6b94]">
-                Submission deadline
-              </p>
-              <p
-                className="font-mono mt-4 font-medium leading-[1] tracking-[-0.025em] text-[#1d1d1f]"
-                style={{ fontSize: "clamp(34px, 4.6vw, 56px)" }}
-              >
-                <RescheduledDate prefix="2026-05-" oldDay="08" newDay="11" />
-              </p>
-              <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-2">
-                <p className="font-mono text-[13px] font-medium tracking-[0.02em] text-[#4a6b94]">
-                  AOE · {site.submissionDeadlineLabel}
-                </p>
-                <p className="font-mono text-[12px] text-slate-500">
-                  <LocalDeadline isoUtc={site.submissionDeadlineIso} />
-                </p>
+            <div className="mt-12 max-w-[960px] border-y border-[#cbd5e1] py-6">
+              <div className="grid gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:items-center">
+                <div>
+                  <p className="font-mono text-[11px] font-medium uppercase tracking-[0.14em] text-[#4a6b94]">
+                    Workshop date
+                  </p>
+                  <time
+                    dateTime={site.workshopDateIso}
+                    className="font-display mt-3 block text-[40px] font-semibold leading-none tracking-[-0.035em] text-[#1d1d1f] sm:text-[48px] lg:text-[56px]"
+                  >
+                    {site.workshopDateShort}
+                  </time>
+                  <p className="font-mono mt-3 text-[11px] font-medium uppercase tracking-[0.12em] text-[#4a6b94]">
+                    {site.workshopDateLabel}
+                  </p>
+                </div>
+
+                <div>
+                  <p className="font-mono text-[11px] font-medium uppercase tracking-[0.14em] text-slate-500">
+                    In person
+                  </p>
+                  <p className="mt-3 text-[20px] font-semibold leading-[1.2] tracking-[-0.02em] text-[#1d1d1f] sm:text-[22px]">
+                    {site.workshopVenueRoom}
+                  </p>
+                  <p className="mt-2 max-w-[560px] text-[15px] leading-[1.6] text-slate-600 sm:text-[16px]">
+                    {site.workshopVenue}, {site.workshopLocation}
+                  </p>
+                </div>
               </div>
             </div>
 
-            {/* Notification date — quieter, flat, inline */}
-            <div className="mt-14 max-w-[640px] border-t border-[#d8dde5] pt-6">
-              <div className="flex flex-wrap items-baseline gap-x-5 gap-y-2">
-                <span className="font-mono text-[11px] font-medium uppercase tracking-[0.12em] text-slate-500">
+            <div className="mt-10 grid max-w-[960px] gap-8 md:grid-cols-2">
+              <div className="border-t border-[#d8dde5] pt-6">
+                <p className="font-mono text-[11px] font-medium uppercase tracking-[0.12em] text-slate-500">
+                  Submission deadline
+                </p>
+                <p className="font-mono mt-3 text-[22px] font-medium leading-[1.2] text-[#1d1d1f]">
+                  <RescheduledDate prefix="2026-05-" oldDay="08" newDay="11" />
+                </p>
+                <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2">
+                  <p className="font-mono text-[12px] font-medium text-[#4a6b94]">
+                    AOE · {site.submissionDeadlineLabel}
+                  </p>
+                  <p className="font-mono text-[12px] text-slate-500">
+                    <LocalDeadline isoUtc={site.submissionDeadlineIso} />
+                  </p>
+                </div>
+              </div>
+
+              <div className="border-t border-[#d8dde5] pt-6">
+                <p className="font-mono text-[11px] font-medium uppercase tracking-[0.12em] text-slate-500">
                   Notification date
-                </span>
-                <span className="font-mono text-[18px] font-medium tracking-[-0.01em] text-[#1d1d1f]">
+                </p>
+                <p className="font-mono mt-3 text-[22px] font-medium leading-[1.2] text-[#1d1d1f]">
                   <RescheduledDate
                     prefix="2026-05-"
                     oldDay="15"
                     newDay="25"
                   />
-                </span>
-                <span className="font-mono text-[12px] text-slate-500">
+                </p>
+                <p className="font-mono mt-3 text-[12px] font-medium text-[#4a6b94]">
                   AOE · {site.notificationDateLabel}
-                </span>
+                </p>
               </div>
             </div>
           </div>

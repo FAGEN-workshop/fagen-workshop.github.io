@@ -60,6 +60,12 @@ export const site = {
     "ICML 2026 workshop on actionable failure modes in agentic AI: reproducible triggers, trace diagnostics, and verified fixes.",
   openReviewUrl:
     "https://openreview.net/group?id=ICML.cc/2026/Workshop/FAGEN#tab-recent-activity",
+  workshopDateLabel: "July 10, 2026",
+  workshopDateShort: "July 10",
+  workshopDateIso: "2026-07-10",
+  workshopVenueRoom: "GRAND BALLROOM 104-105",
+  workshopVenue: "COEX Convention & Exhibition Center",
+  workshopLocation: "Seoul, South Korea",
   submissionDeadlineLabel: "May 11, 2026 (AOE)",
   submissionDeadlineIso: "2026-05-12T11:59:00Z",
   notificationDateLabel: "May 25, 2026 (AOE)",
@@ -82,6 +88,13 @@ export const navigation: NavItem[] = [
 ];
 
 export const news: NewsItem[] = [
+  {
+    date: "June 19, 2026",
+    iso: "2026-06-19",
+    title: "Workshop date and room confirmed",
+    body: "FAGEN will take place on July 10 in Grand Ballroom 104-105 at COEX Convention & Exhibition Center, Seoul, South Korea.",
+    link: { label: "View key dates", href: "#dates" },
+  },
   {
     date: "April 19, 2026",
     iso: "2026-04-19",

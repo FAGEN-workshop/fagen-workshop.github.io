@@ -62,9 +62,37 @@ export function HeroSection() {
           {site.tagline}
         </p>
 
+        <dl
+          className="hero-in mt-8 grid max-w-[780px] gap-4 border-t border-[#6b8fbf]/25 pt-5 sm:grid-cols-[170px_1fr] sm:gap-7"
+          style={{ animationDelay: `${lastWordEndMs + 180}ms` }}
+        >
+          <div>
+            <dt className="font-mono text-[10.5px] font-medium uppercase tracking-[0.14em] text-[#ff8a78]">
+              Workshop date
+            </dt>
+            <dd className="mt-2 font-mono text-[13px] font-medium leading-[1.45] tracking-[0.04em] text-[#f5f5f7] sm:text-[14px]">
+              <time dateTime={site.workshopDateIso}>
+                {site.workshopDateLabel}
+              </time>
+            </dd>
+          </div>
+
+          <div>
+            <dt className="font-mono text-[10.5px] font-medium uppercase tracking-[0.14em] text-[#a3bdd8]">
+              In person
+            </dt>
+            <dd className="mt-2 text-[15px] font-semibold leading-[1.35] text-[#f5f5f7] sm:text-[16px]">
+              {site.workshopVenueRoom}
+            </dd>
+            <dd className="mt-1 max-w-[560px] text-[13.5px] leading-[1.55] text-[#bfd1e4] sm:text-[14.5px]">
+              {site.workshopVenue}, {site.workshopLocation}
+            </dd>
+          </div>
+        </dl>
+
         <div
           className="hero-in mt-10 flex flex-col gap-3 sm:flex-row"
-          style={{ animationDelay: `${lastWordEndMs + 220}ms` }}
+          style={{ animationDelay: `${lastWordEndMs + 280}ms` }}
         >
           <Link
             href="#cfp"
