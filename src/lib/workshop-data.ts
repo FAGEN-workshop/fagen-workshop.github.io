@@ -361,65 +361,23 @@ export const organizers: Person[] = [
   },
 ];
 
+// Note: schedule is tentative. All times in KST (Seoul), Friday, July 10, 2026.
 export const schedule: ScheduleItem[] = [
-  {
-    time: "08:00 - 08:10",
-    event: "Opening remarks",
-  },
-  {
-    time: "08:10 - 08:50",
-    event: "Keynote 1",
-    detail: "TBD",
-  },
-  {
-    time: "08:50 - 09:30",
-    event: "Keynote 2",
-    detail: "TBD",
-  },
-  {
-    time: "09:30 - 10:10",
-    event: "Contributed spotlights",
-    detail: "Five to eight short talks from accepted contributions",
-  },
-  {
-    time: "10:10 - 10:40",
-    event: "Coffee break",
-  },
-  {
-    time: "10:40 - 11:20",
-    event: "Keynote 3",
-    detail: "TBD",
-  },
-  {
-    time: "11:20 - 12:00",
-    event: "Keynote 4",
-    detail: "TBD",
-  },
-  {
-    time: "12:00 - 14:00",
-    event: "Lunch and posters",
-  },
-  {
-    time: "14:00 - 14:40",
-    event: "Keynote 5",
-    detail: "TBD",
-  },
-  {
-    time: "14:40 - 15:20",
-    event: "Keynote 6",
-    detail: "TBD",
-  },
-  {
-    time: "15:20 - 15:50",
-    event: "Coffee break",
-  },
-  {
-    time: "15:50 - 16:50",
-    event: "Panel discussion",
-    detail: "Panelists TBD",
-  },
-  {
-    time: "16:50 - 17:00",
-    event: "Closing remarks and awards",
-  },
+  { time: "08:00–08:10", event: "Opening" },
+  { time: "08:10–08:40", event: "Keynote Speech — Maarten Sap" },
+  { time: "08:40–09:10", event: "Keynote Speech — Greg Durrett" },
+  { time: "09:10–09:40", event: "Keynote Speech — Andrea Zanette" },
+  { time: "09:40–10:10", event: "Keynote Speech — Yoshua Bengio" },
+  { time: "10:10–11:00", event: "Coffee break + Poster Session 1" },
+  { time: "11:00–11:30", event: "Keynote Speech — Nouha Dziri" },
+  { time: "11:30–12:00", event: "Keynote Speech — Yu Su" },
+  { time: "12:00–13:00", event: "Lunch" },
+  { time: "13:00–13:30", event: "Keynote Speech — Bo Li" },
+  { time: "13:30–14:00", event: "Keynote Speech — Rishi Bommasani" },
+  { time: "14:00–14:40", event: "Oral Presentations and Special Invited Talk" },
+  { time: "14:40–15:30", event: "Coffee break + Poster Session 2" },
+  { time: "15:30–16:00", event: "Keynote Speech — Iryna Gurevych" },
+  { time: "16:00–16:30", event: "Keynote Speech — Samy Bengio" },
+  { time: "16:30–16:50", event: "Sponsor Section" },
+  { time: "16:50–17:00", event: "Best Paper + Closing" },
 ];

@@ -248,7 +248,7 @@ export default function Home() {
         {/* Schedule */}
         <section id="schedule" className="scroll-mt-24 bg-[#eceff3] py-20">
           <div className="mx-auto max-w-[1154px] px-4">
-            <SectionTitle>Workshop Schedule (Tentative)</SectionTitle>
+            <SectionTitle>Tentative Schedule</SectionTitle>
 
             <div className="mt-12 max-w-[900px] divide-y divide-[#d8dde5] border-y border-[#d8dde5]">
               {schedule.map((row) => (
@@ -277,6 +277,9 @@ export default function Home() {
                 </div>
               ))}
             </div>
+            <p className="mt-6 max-w-[900px] text-[13px] leading-[1.6] text-slate-500">
+              * In-person posters may be presented flexibly at either of the two poster sessions.
+            </p>
           </div>
         </section>
 
